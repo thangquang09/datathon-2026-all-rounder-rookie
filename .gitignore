@@ -49,6 +49,7 @@ pip-wheel-metadata/
 */.ipynb_checkpoints/
 profile_default/
 ipython_config.py
+.jupyter_runtime/
 
 # Data science outputs
 artifacts/
