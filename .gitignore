@@ -48,6 +48,9 @@ pip-wheel-metadata/
 .ipynb_checkpoints/
 */.ipynb_checkpoints/
 profile_default/
+
+# Large binary files
+*.pbix
 ipython_config.py
 .jupyter_runtime/
 
