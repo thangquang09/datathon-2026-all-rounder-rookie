@@ -1,0 +1,117 @@
+term,coef,label,abs_coef
+numeric__signup_to_first_order_days,-0.996256977378725,Signup to first order days,0.996256977378725
+categorical__first_order_city_Cam Pha,-0.7451254414396858,First order city: Cam Pha,0.7451254414396858
+numeric__first_order_value,-0.7170002831171437,First order value,0.7170002831171437
+categorical__first_order_month_May,-0.5434584111908423,First order month: May,0.5434584111908423
+categorical__first_product_price_band_Low,-0.458839774840552,First product price band: Low,0.458839774840552
+categorical__first_order_month_Jun,-0.4503963688440918,First order month: Jun,0.4503963688440918
+categorical__first_product_category_Casual,-0.43221339479153276,First product category: Casual,0.43221339479153276
+categorical__region_Central,-0.27050895469477504,Region: Central,0.27050895469477504
+numeric__first_order_discount_rate,-0.2699774122382028,First order discount rate,0.2699774122382028
+categorical__first_product_segment_Balanced,-0.2523187364879027,First product segment: Balanced,0.2523187364879027
+numeric__first_product_cogs,-0.22820356437871553,First product COGS,0.22820356437871553
+categorical__first_order_month_Apr,-0.18841003230769304,First order month: Apr,0.18841003230769304
+categorical__first_product_segment_Everyday,-0.18173904763593743,First product segment: Everyday,0.18173904763593743
+categorical__first_product_segment_Premium,-0.17177407131827635,First product segment: Premium,0.17177407131827635
+categorical__first_order_city_infrequent_sklearn,-0.15427335245247756,First order city: infrequent_sklearn,0.15427335245247756
+categorical__first_order_month_Aug,-0.14157329528124576,First order month: Aug,0.14157329528124576
+categorical__first_order_city_Tuy Hoa,-0.13949687497243404,First order city: Tuy Hoa,0.13949687497243404
+categorical__first_order_city_Nha Trang,-0.11212404022849676,First order city: Nha Trang,0.11212404022849676
+categorical__first_order_city_Tam Ky,-0.10506011968372667,First order city: Tam Ky,0.10506011968372667
+categorical__first_order_city_Long Xuyen,-0.09969542404973245,First order city: Long Xuyen,0.09969542404973245
+categorical__first_order_source_organic_search,-0.09768572076314938,First order source: organic_search,0.09768572076314938
+numeric__first_order_profit,-0.07357023913638297,First order profit,0.07357023913638297
+categorical__first_product_segment_Activewear,-0.07100282015006894,First product segment: Activewear,0.07100282015006894
+categorical__first_order_city_Dong Hoi,-0.05037813814556509,First order city: Dong Hoi,0.05037813814556509
+categorical__first_product_price_band_Mid,-0.049336822774017096,First product price band: Mid,0.049336822774017096
+categorical__first_order_city_Vinh Long,-0.048652653540239135,First order city: Vinh Long,0.048652653540239135
+categorical__first_order_city_Da Nang,-0.04370078541480364,First order city: Da Nang,0.04370078541480364
+categorical__first_order_month_Jan,-0.04055533811820831,First order month: Jan,0.04055533811820831
+categorical__first_payment_method_credit_card,-0.03758473331200217,Payment method: credit_card,0.03758473331200217
+categorical__first_order_city_Hue,-0.03407147451243113,First order city: Hue,0.03407147451243113
+categorical__acquisition_channel_email_campaign,-0.03239636392340679,Acquisition channel: email_campaign,0.03239636392340679
+categorical__device_type_mobile,-0.03140454249149999,Device: mobile,0.03140454249149999
+categorical__first_order_city_Phan Rang-Thap Cham,-0.029803329310145718,First order city: Phan Rang-Thap Cham,0.029803329310145718
+categorical__region_East,-0.025855211926344306,Region: East,0.025855211926344306
+categorical__first_order_city_Quy Nhon,-0.02467448123610515,First order city: Quy Nhon,0.02467448123610515
+numeric__first_order_refund,-0.02376181958862706,First order refund,0.02376181958862706
+categorical__first_payment_method_bank_transfer,-0.0215404089888602,Payment method: bank_transfer,0.0215404089888602
+categorical__has_first_order_review_No,-0.02123381193120334,Reviewed first order: No,0.02123381193120334
+categorical__first_order_city_Ca Mau,-0.01818148359262922,First order city: Ca Mau,0.01818148359262922
+categorical__acquisition_channel_referral,-0.014639878586678827,Acquisition channel: referral,0.014639878586678827
+categorical__gender_Non-binary,-0.0142247442864667,Gender: Non-binary,0.0142247442864667
+categorical__age_group_25-34,-0.01369278918361411,Age group: 25-34,0.01369278918361411
+categorical__first_order_city_Hoi An,-0.01317257154377828,First order city: Hoi An,0.01317257154377828
+categorical__age_group_18-24,-0.012771136660574351,Age group: 18-24,0.012771136660574351
+categorical__age_group_35-44,-0.012358012316929512,Age group: 35-44,0.012358012316929512
+categorical__is_promo_first_order_No,-0.005143255410194078,Promo on first order: No,0.005143255410194078
+categorical__first_order_city_Soc Trang,-0.003714500124822862,First order city: Soc Trang,0.003714500124822862
+categorical__first_order_source_email_campaign,-0.002019233606759271,First order source: email_campaign,0.002019233606759271
+categorical__acquisition_channel_paid_search,0.0021718367718545637,Acquisition channel: paid_search,0.0021718367718545637
+categorical__first_order_month_Mar,0.003466821871388561,First order month: Mar,0.003466821871388561
+categorical__is_promo_first_order_Yes,0.005264024049973748,Promo on first order: Yes,0.005264024049973748
+categorical__first_order_source_direct,0.005297897413310463,First order source: direct,0.005297897413310463
+numeric__first_order_rating,0.0059997616826340345,First order rating,0.0059997616826340345
+categorical__gender_Female,0.006569936176548207,Gender: Female,0.006569936176548207
+categorical__first_order_city_Hanoi,0.007485833437126908,First order city: Hanoi,0.007485833437126908
+categorical__gender_Male,0.007775576749618151,Gender: Male,0.007775576749618151
+categorical__acquisition_channel_organic_search,0.008500789123934191,Acquisition channel: organic_search,0.008500789123934191
+categorical__first_payment_method_paypal,0.008884191443634696,Payment method: paypal,0.008884191443634696
+categorical__age_group_45-54,0.011408993205746908,Age group: 45-54,0.011408993205746908
+numeric__first_installments,0.011512957222156879,First order installments,0.011512957222156879
+numeric__first_order_item_count,0.011713951976206815,First order item count,0.011713951976206815
+categorical__first_order_month_Feb,0.014002977093559302,First order month: Feb,0.014002977093559302
+categorical__first_payment_method_cod,0.014490014869295364,Payment method: cod,0.014490014869295364
+categorical__first_order_city_Thai Nguyen,0.014529610245691904,First order city: Thai Nguyen,0.014529610245691904
+categorical__device_type_desktop,0.014535239532903031,Device: desktop,0.014535239532903031
+categorical__acquisition_channel_direct,0.015588795584268239,Acquisition channel: direct,0.015588795584268239
+categorical__first_order_source_social_media,0.016386175904222502,First order source: social_media,0.016386175904222502
+categorical__device_type_tablet,0.016990071598269797,Device: tablet,0.016990071598269797
+numeric__first_delivery_days,0.01908018956260385,First delivery days,0.01908018956260385
+categorical__acquisition_channel_social_media,0.020895589669786753,Acquisition channel: social_media,0.020895589669786753
+categorical__has_first_order_review_Yes,0.021354580570916687,Reviewed first order: Yes,0.021354580570916687
+numeric__first_order_return_qty,0.023452441843714197,First order return qty,0.023452441843714197
+categorical__first_order_city_Lao Cai,0.025332501504901395,First order city: Lao Cai,0.025332501504901395
+categorical__first_order_source_paid_search,0.02661025436566645,First order source: paid_search,0.02661025436566645
+categorical__age_group_55+,0.027533713595133742,Age group: 55+,0.027533713595133742
+categorical__first_product_price_band_High,0.02790846200858228,First product price band: High,0.02790846200858228
+categorical__first_order_city_Bac Ninh,0.028172424353127428,First order city: Bac Ninh,0.028172424353127428
+numeric__first_order_margin,0.029157135423805255,First order margin,0.029157135423805255
+categorical__first_payment_method_apple_pay,0.035871704627648875,Payment method: apple_pay,0.035871704627648875
+numeric__first_product_unit_price,0.04118671146757058,First product unit price,0.04118671146757058
+categorical__first_order_city_Uong Bi,0.0411944210682567,First order city: Uong Bi,0.0411944210682567
+categorical__first_order_city_Ha Long,0.04547791898577756,First order city: Ha Long,0.04547791898577756
+categorical__first_order_city_Nam Dinh,0.048585039348401214,First order city: Nam Dinh,0.048585039348401214
+categorical__first_order_month_Oct,0.05068146234653156,First order month: Oct,0.05068146234653156
+categorical__first_order_source_referral,0.05153139532638873,First order source: referral,0.05153139532638873
+categorical__first_order_city_Hai Phong,0.0528343244449549,First order city: Hai Phong,0.0528343244449549
+numeric__first_order_units,0.055405364430311264,First order units,0.055405364430311264
+categorical__first_product_segment_All-weather,0.05667071685981943,First product segment: All-weather,0.05667071685981943
+categorical__first_order_city_Ho Chi Minh City,0.05962804663402593,First order city: Ho Chi Minh City,0.05962804663402593
+categorical__first_order_city_Phu Ly,0.06309514621874353,First order city: Phu Ly,0.06309514621874353
+categorical__first_order_city_Vung Tau,0.063641123433148,First order city: Vung Tau,0.063641123433148
+categorical__first_order_city_Phan Thiet,0.06439729553469312,First order city: Phan Thiet,0.06439729553469312
+categorical__first_order_city_Bac Giang,0.06656446802087229,First order city: Bac Giang,0.06656446802087229
+numeric__first_shipping_fee,0.06678220539655448,First shipping fee,0.06678220539655448
+categorical__first_product_segment_Trendy,0.0678985236366664,First product segment: Trendy,0.0678985236366664
+categorical__first_product_category_GenZ,0.0678985236366664,First product category: GenZ,0.0678985236366664
+categorical__first_order_city_Quang Ngai,0.08202375041776579,First order city: Quang Ngai,0.08202375041776579
+categorical__first_order_city_Ben Tre,0.0860598787940801,First order city: Ben Tre,0.0860598787940801
+categorical__first_order_city_Ninh Binh,0.08636212201177791,First order city: Ninh Binh,0.08636212201177791
+categorical__first_order_city_Buon Ma Thuot,0.08890551096102729,First order city: Buon Ma Thuot,0.08890551096102729
+categorical__first_order_city_Viet Tri,0.09850763251587656,First order city: Viet Tri,0.09850763251587656
+categorical__first_product_category_Streetwear,0.11832841961149337,First product category: Streetwear,0.11832841961149337
+categorical__first_order_city_Kon Tum,0.1355518144000755,First order city: Kon Tum,0.1355518144000755
+categorical__first_order_city_Son Tay,0.14112878735793136,First order city: Son Tay,0.14112878735793136
+categorical__first_order_month_Nov,0.14535934094245656,First order month: Nov,0.14535934094245656
+categorical__first_order_city_Pleiku,0.1580178648975117,First order city: Pleiku,0.1580178648975117
+categorical__first_order_city_Bac Lieu,0.16474992430104907,First order city: Bac Lieu,0.16474992430104907
+categorical__first_product_segment_Performance,0.1897940037131093,First product segment: Performance,0.1897940037131093
+categorical__first_product_category_Outdoor,0.2461072201829997,First product category: Outdoor,0.2461072201829997
+categorical__region_West,0.29648493526092123,Region: West,0.29648493526092123
+categorical__first_order_month_Sep,0.3386330527977443,First order month: Sep,0.3386330527977443
+categorical__first_product_segment_Standard,0.3625922000222282,First product segment: Standard,0.3625922000222282
+categorical__first_order_month_Jul,0.38115470807557733,First order month: Jul,0.38115470807557733
+categorical__first_order_month_Dec,0.4312158512545779,First order month: Dec,0.4312158512545779
+categorical__first_product_price_band_Premium,0.4803889042457156,First product price band: Premium,0.4803889042457156
+numeric__first_payment_value,0.728729244668984,First payment value,0.728729244668984
