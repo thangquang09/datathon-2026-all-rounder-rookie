@@ -1,0 +1,297 @@
+{
+  "train_days": 3833,
+  "train_start": "2012-07-04T00:00:00",
+  "train_end": "2022-12-31T00:00:00",
+  "test_horizon_days": 548,
+  "test_range": [
+    "2023-01-01",
+    "2024-07-01"
+  ],
+  "panel_rows": 3833,
+  "panel_cols": 17,
+  "regime.pre_mean_vnd_day": 5070140.950215008,
+  "regime.post_mean_vnd_day": 3014443.70405202,
+  "regime.drop_pct": 40.545169579078724,
+  "regime.t_stat": 28.565152628665924,
+  "regime.p_value": 7.600359689234246e-163,
+  "regime.cohen_d": 0.8939342088400252,
+  "regime.n_pre": 2372,
+  "regime.n_post": 1461,
+  "yoy_table": [
+    {
+      "year": 2012,
+      "revenue_mil": 741.5,
+      "yoy_pct": null,
+      "margin": 0.21
+    },
+    {
+      "year": 2013,
+      "revenue_mil": 1657.17,
+      "yoy_pct": 123.49,
+      "margin": 0.1
+    },
+    {
+      "year": 2014,
+      "revenue_mil": 1871.85,
+      "yoy_pct": 12.95,
+      "margin": 0.15
+    },
+    {
+      "year": 2015,
+      "revenue_mil": 1889.93,
+      "yoy_pct": 0.97,
+      "margin": 0.1
+    },
+    {
+      "year": 2016,
+      "revenue_mil": 2104.64,
+      "yoy_pct": 11.36,
+      "margin": 0.15
+    },
+    {
+      "year": 2017,
+      "revenue_mil": 1911.16,
+      "yoy_pct": -9.19,
+      "margin": 0.1
+    },
+    {
+      "year": 2018,
+      "revenue_mil": 1850.12,
+      "yoy_pct": -3.19,
+      "margin": 0.16
+    },
+    {
+      "year": 2019,
+      "revenue_mil": 1136.8,
+      "yoy_pct": -38.56,
+      "margin": 0.1
+    },
+    {
+      "year": 2020,
+      "revenue_mil": 1054.51,
+      "yoy_pct": -7.24,
+      "margin": 0.15
+    },
+    {
+      "year": 2021,
+      "revenue_mil": 1043.04,
+      "yoy_pct": -1.09,
+      "margin": 0.08
+    },
+    {
+      "year": 2022,
+      "revenue_mil": 1169.75,
+      "yoy_pct": 12.15,
+      "margin": 0.12
+    }
+  ],
+  "seasonality.grand_mean_vnd": 4286584.029619097,
+  "seasonality.month_mean_vnd": {
+    "1": 2591155.0,
+    "2": 3480801.0,
+    "3": 4928185.0,
+    "4": 6532952.0,
+    "5": 6575416.0,
+    "6": 6427109.0,
+    "7": 4659789.0,
+    "8": 4441193.0,
+    "9": 3797826.0,
+    "10": 3302725.0,
+    "11": 2611295.0,
+    "12": 2524350.0
+  },
+  "seasonality.month_delta_pct": {
+    "1": -39.55,
+    "2": -18.8,
+    "3": 14.97,
+    "4": 52.4,
+    "5": 53.4,
+    "6": 49.94,
+    "7": 8.71,
+    "8": 3.61,
+    "9": -11.4,
+    "10": -22.95,
+    "11": -39.08,
+    "12": -41.11
+  },
+  "seasonality.top_month": 5,
+  "seasonality.top_month_pct": 53.4,
+  "seasonality.bottom_month": 12,
+  "seasonality.bottom_month_pct": -41.11,
+  "seasonality.month_dow_pct_max": 89.86666098310305,
+  "seasonality.month_dow_pct_min": -45.75516319794108,
+  "category.revenue_mil": {
+    "Streetwear": 12558.5,
+    "Outdoor": 2353.4,
+    "Casual": 440.3,
+    "GenZ": 328.7
+  },
+  "category.share_pct": {
+    "Streetwear": 80.1,
+    "Outdoor": 15.0,
+    "Casual": 2.8,
+    "GenZ": 2.1
+  },
+  "category.hhi": 0.6651590162581097,
+  "category.top_share_pct": 80.0878885385288,
+  "promo.bucket_table": [
+    {
+      "promo_bucket": "<10%",
+      "count": 2160,
+      "mean": 4537167.0,
+      "median": 3822972.0
+    },
+    {
+      "promo_bucket": "10-25%",
+      "count": 72,
+      "mean": 4569058.0,
+      "median": 3729726.0
+    },
+    {
+      "promo_bucket": "25-50%",
+      "count": 176,
+      "mean": 4138430.0,
+      "median": 3723076.0
+    },
+    {
+      "promo_bucket": ">50%",
+      "count": 1425,
+      "mean": 3910779.0,
+      "median": 3313548.0
+    }
+  ],
+  "promo.u_stat": 1753853.0,
+  "promo.p_value": 1.3983712461296802e-12,
+  "promo.light_median": 3822972.375,
+  "promo.heavy_median": 3313547.73,
+  "promo.gap_median_pct": 13.325355117168483,
+  "promo.n_light": 2160,
+  "promo.n_heavy": 1425,
+  "promo.spearman_rho": -0.11357887240525458,
+  "exogenous.spearman": {
+    "COGS": 0.9718659956779905,
+    "n_orders": 0.9233205141952813,
+    "refund": 0.4508734683476418,
+    "sessions": 0.332316834582504,
+    "unique_visitors": 0.3325853827670049,
+    "page_views": 0.31588986858011264,
+    "bounce_rate": -0.017015844927999034,
+    "avg_sess": -0.02494242752719785,
+    "promo_share": -0.11357887240525458,
+    "total_discount": 0.017945687561079723,
+    "margin": 0.17135184166028436,
+    "unique_customers_day": 0.9242649531275011,
+    "stockout_rate_lag30": 0.15153317897610966,
+    "overstock_rate_lag30": -0.42359006655829934,
+    "fill_rate_lag30": -0.3464825784888363
+  },
+  "exogenous.lead_lag_sessions": {
+    "-7": 0.32589121975424484,
+    "-6": 0.32474558203111414,
+    "-5": 0.32841857221572784,
+    "-4": 0.330336328550481,
+    "-3": 0.33270077901530803,
+    "-2": 0.33360486367685815,
+    "-1": 0.33650125520611934,
+    "0": 0.332316834582504,
+    "1": 0.3278515085309528,
+    "2": 0.3260830534944294,
+    "3": 0.3240180698852015,
+    "4": 0.3246302490127616,
+    "5": 0.3252879322324431,
+    "6": 0.32752663651723657,
+    "7": 0.3288073155082258
+  },
+  "inventory.2022_monthly": [
+    {
+      "month_str": "2022-01",
+      "stockout_rate": 0.582,
+      "overstock_rate": 0.82,
+      "fill_rate": 0.969
+    },
+    {
+      "month_str": "2022-02",
+      "stockout_rate": 0.681,
+      "overstock_rate": 0.749,
+      "fill_rate": 0.964
+    },
+    {
+      "month_str": "2022-03",
+      "stockout_rate": 0.681,
+      "overstock_rate": 0.728,
+      "fill_rate": 0.963
+    },
+    {
+      "month_str": "2022-04",
+      "stockout_rate": 0.702,
+      "overstock_rate": 0.681,
+      "fill_rate": 0.958
+    },
+    {
+      "month_str": "2022-05",
+      "stockout_rate": 0.662,
+      "overstock_rate": 0.713,
+      "fill_rate": 0.965
+    },
+    {
+      "month_str": "2022-06",
+      "stockout_rate": 0.675,
+      "overstock_rate": 0.696,
+      "fill_rate": 0.964
+    },
+    {
+      "month_str": "2022-07",
+      "stockout_rate": 0.693,
+      "overstock_rate": 0.749,
+      "fill_rate": 0.965
+    },
+    {
+      "month_str": "2022-08",
+      "stockout_rate": 0.653,
+      "overstock_rate": 0.727,
+      "fill_rate": 0.965
+    },
+    {
+      "month_str": "2022-09",
+      "stockout_rate": 0.642,
+      "overstock_rate": 0.811,
+      "fill_rate": 0.967
+    },
+    {
+      "month_str": "2022-10",
+      "stockout_rate": 0.655,
+      "overstock_rate": 0.858,
+      "fill_rate": 0.962
+    },
+    {
+      "month_str": "2022-11",
+      "stockout_rate": 0.697,
+      "overstock_rate": 0.87,
+      "fill_rate": 0.96
+    },
+    {
+      "month_str": "2022-12",
+      "stockout_rate": 0.672,
+      "overstock_rate": 0.804,
+      "fill_rate": 0.961
+    }
+  ],
+  "inventory.rho_stockout": 0.21062261997642515,
+  "inventory.rho_overstock": -0.6472320959880016,
+  "inventory.rho_fillrate": -0.4938792650918636,
+  "returns.reason_share_pct": {
+    "wrong_size": 35.0,
+    "defective": 20.1,
+    "not_as_described": 17.6,
+    "changed_mind": 17.4,
+    "late_delivery": 10.0
+  },
+  "returns.n_total": 39939,
+  "returns.refund_to_revenue_pct": 3.1076305297174045,
+  "customers.n": 90246,
+  "customers.top10_pct": 39.981069591795254,
+  "customers.top20_pct": 60.6617326594945,
+  "customers.repeat_pct": 75.22549475877047,
+  "customers.orders_per_cust_mean": 7.168683376548545,
+  "customers.orders_per_cust_median": 4.0
+}
