@@ -1,0 +1,10 @@
+question,sources,verdict,caveat
+"Top sản phẩm theo doanh thu, số lượng, gross margin",order_items + orders + products + sales,Làm được,Gross margin dùng unit_price sau giảm giá trừ product cogs; chưa trừ marketing/logistics.
+Bán chạy/lợi nhuận cao vào thời điểm nào,orders.order_date + order_items + products,Làm được,Phân tích theo tháng/ngày; inventory chỉ có snapshot cuối tháng.
+Bán qua kênh nào,"orders.order_source, web_traffic.traffic_source",Làm được,order_source không phải platform social chi tiết.
+Sản phẩm nào phụ thuộc promotion,order_items.promo_id/promo_id_2 + promotions,Làm được mô tả,Không suy ra causal lift nếu không có control/randomization.
+Tối ưu chi phí marketing/promotion,Không có spend/cost campaign,Không kết luận ROI,Chỉ phân tích revenue/margin/discount/refund theo kênh.
+Review và hoàn hàng theo sản phẩm,reviews + returns + products,Làm được,Review text chỉ có title ngắn; dùng rating và title category nhẹ.
+Khu vực thường mua sản phẩm/danh mục,orders.zip + geography + order_items + products,Làm được,"Không có tồn kho theo kho/khu vực, chỉ có demand region."
+"Có đủ hàng trước thời gian vàng, hàng tồn lâu/tồn nhiều",inventory monthly + product demand by month,Làm được ở mức tháng,Không thấy tồn kho theo ngày/kho; đánh giá bằng stockout_days/fill_rate/days_of_supply.
+Sản phẩm đang bán trên TikTok để scale platform,Không có TikTok/platform granular,Không làm,Có thể thay bằng social_media/order_source hoặc promo_channel=social_media.

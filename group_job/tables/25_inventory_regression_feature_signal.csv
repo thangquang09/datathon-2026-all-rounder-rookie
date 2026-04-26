@@ -1,0 +1,14 @@
+feature,corr_with_next_units_sold
+units_sold,0.8297470985715785
+units_received,0.8276242476228545
+prev_units_sold,0.7494205227405496
+stock_on_hand,0.3913266977714753
+days_of_supply,-0.09663275009385973
+stockout_days,0.09468542385201142
+fill_rate,-0.09467591518518727
+sell_through_rate,0.09343305232592512
+month,-0.07783791416890386
+prev_sell_through_rate,0.0640483731976944
+overstock_flag,-0.013736946573457545
+stockout_flag,0.0020095721604487665
+reorder_flag,

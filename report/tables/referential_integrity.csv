@@ -1,0 +1,13 @@
+check,orphan_rows,checked_rows,pass_rate
+orders.customer_id -> customers.customer_id,0,646945,1.0
+orders.zip -> geography.zip,0,646945,1.0
+order_items.order_id -> orders.order_id,0,714669,1.0
+order_items.product_id -> products.product_id,0,714669,1.0
+payments.order_id -> orders.order_id,0,646945,1.0
+shipments.order_id -> orders.order_id,0,566067,1.0
+returns.order_id -> orders.order_id,0,39939,1.0
+returns.product_id -> products.product_id,0,39939,1.0
+reviews.order_id -> orders.order_id,0,113551,1.0
+reviews.product_id -> products.product_id,0,113551,1.0
+reviews.customer_id -> customers.customer_id,0,113551,1.0
+inventory.product_id -> products.product_id,0,60247,1.0

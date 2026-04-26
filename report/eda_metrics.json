@@ -1,0 +1,2357 @@
+{
+  "data_scope": {
+    "tables_used": [
+      "products",
+      "customers",
+      "promotions",
+      "geography",
+      "orders",
+      "order_items",
+      "payments",
+      "shipments",
+      "returns",
+      "reviews",
+      "sales",
+      "inventory",
+      "web_traffic"
+    ],
+    "forbidden_tables": [
+      "sales_test",
+      "sample_submission"
+    ],
+    "sales_min": "2012-07-04",
+    "sales_max": "2022-12-31",
+    "sales_days": 3833,
+    "total_revenue": 16430476585.529999,
+    "total_cogs": 14163450519.169998,
+    "gross_margin_rate": 0.1379768903573087
+  },
+  "yearly": [
+    {
+      "year": 2012,
+      "revenue": 741497748.02,
+      "cogs": 587461923.81,
+      "days": 181,
+      "gross_margin_rate": 0.207736,
+      "revenue_yoy_pct": NaN,
+      "item_revenue": 741497748.02,
+      "units": 166286,
+      "orders": 32051,
+      "lines": 37007,
+      "aov": 23134.933326,
+      "units_per_order": 5.188169,
+      "asp": 4459.171235,
+      "orders_yoy_pct": NaN,
+      "aov_yoy_pct": NaN,
+      "units_yoy_pct": NaN
+    },
+    {
+      "year": 2013,
+      "revenue": 1657169417.27,
+      "cogs": 1465980103.2,
+      "days": 365,
+      "gross_margin_rate": 0.115371,
+      "revenue_yoy_pct": 123.489474,
+      "item_revenue": 1657169417.27,
+      "units": 392522,
+      "orders": 76849,
+      "lines": 87341,
+      "aov": 21563.968526,
+      "units_per_order": 5.107705,
+      "asp": 4221.851049,
+      "orders_yoy_pct": 139.77099,
+      "aov_yoy_pct": -6.790444,
+      "units_yoy_pct": 136.052344
+    },
+    {
+      "year": 2014,
+      "revenue": 1871845882.8,
+      "cogs": 1574607456.89,
+      "days": 365,
+      "gross_margin_rate": 0.158794,
+      "revenue_yoy_pct": 12.954407,
+      "item_revenue": 1871845882.8,
+      "units": 410283,
+      "orders": 80645,
+      "lines": 91086,
+      "aov": 23210.935369,
+      "units_per_order": 5.087519,
+      "asp": 4562.328643,
+      "orders_yoy_pct": 4.939557,
+      "aov_yoy_pct": 7.637587,
+      "units_yoy_pct": 4.524842
+    },
+    {
+      "year": 2015,
+      "revenue": 1889933826.92,
+      "cogs": 1665441817.42,
+      "days": 365,
+      "gross_margin_rate": 0.118783,
+      "revenue_yoy_pct": 0.966316,
+      "item_revenue": 1889933826.92,
+      "units": 415509,
+      "orders": 82622,
+      "lines": 92537,
+      "aov": 22874.462334,
+      "units_per_order": 5.029036,
+      "asp": 4548.478678,
+      "orders_yoy_pct": 2.451485,
+      "aov_yoy_pct": -1.449632,
+      "units_yoy_pct": 1.273755
+    },
+    {
+      "year": 2016,
+      "revenue": 2104640677.54,
+      "cogs": 1780559392.69,
+      "days": 366,
+      "gross_margin_rate": 0.153984,
+      "revenue_yoy_pct": 11.360549,
+      "item_revenue": 2104640677.54,
+      "units": 409893,
+      "orders": 82247,
+      "lines": 90895,
+      "aov": 25589.269852,
+      "units_per_order": 4.983683,
+      "asp": 5134.609953,
+      "orders_yoy_pct": -0.453874,
+      "aov_yoy_pct": 11.86829,
+      "units_yoy_pct": -1.351595
+    },
+    {
+      "year": 2017,
+      "revenue": 1911164325.28,
+      "cogs": 1694385793.54,
+      "days": 365,
+      "gross_margin_rate": 0.113427,
+      "revenue_yoy_pct": -9.192845,
+      "item_revenue": 1911164325.28,
+      "units": 375640,
+      "orders": 76010,
+      "lines": 83691,
+      "aov": 25143.59065,
+      "units_per_order": 4.941981,
+      "asp": 5087.755099,
+      "orders_yoy_pct": -7.583255,
+      "aov_yoy_pct": -1.741664,
+      "units_yoy_pct": -8.356571
+    },
+    {
+      "year": 2018,
+      "revenue": 1850122456.08,
+      "cogs": 1542175766.14,
+      "days": 365,
+      "gross_margin_rate": 0.166447,
+      "revenue_yoy_pct": -3.193962,
+      "item_revenue": 1850122456.08,
+      "units": 337646,
+      "orders": 69510,
+      "lines": 75132,
+      "aov": 26616.637262,
+      "units_per_order": 4.857517,
+      "asp": 5479.473934,
+      "orders_yoy_pct": -8.551506,
+      "aov_yoy_pct": 5.858537,
+      "units_yoy_pct": -10.114471
+    },
+    {
+      "year": 2019,
+      "revenue": 1136801441.51,
+      "cogs": 1005202883.72,
+      "days": 365,
+      "gross_margin_rate": 0.115762,
+      "revenue_yoy_pct": -38.555341,
+      "item_revenue": 1136801441.51,
+      "units": 202653,
+      "orders": 41601,
+      "lines": 44925,
+      "aov": 27326.300846,
+      "units_per_order": 4.871349,
+      "asp": 5609.595918,
+      "orders_yoy_pct": -40.151057,
+      "aov_yoy_pct": 2.666241,
+      "units_yoy_pct": -39.980631
+    },
+    {
+      "year": 2020,
+      "revenue": 1054512158.79,
+      "cogs": 886085097.63,
+      "days": 366,
+      "gross_margin_rate": 0.15972,
+      "revenue_yoy_pct": -7.238668,
+      "item_revenue": 1054512158.79,
+      "units": 166880,
+      "orders": 34881,
+      "lines": 37238,
+      "aov": 30231.706625,
+      "units_per_order": 4.784267,
+      "asp": 6318.984652,
+      "orders_yoy_pct": -16.153458,
+      "aov_yoy_pct": 10.632269,
+      "units_yoy_pct": -17.652342
+    },
+    {
+      "year": 2021,
+      "revenue": 1043039819.63,
+      "cogs": 941130120.16,
+      "days": 365,
+      "gross_margin_rate": 0.097705,
+      "revenue_yoy_pct": -1.087929,
+      "item_revenue": 1043039819.63,
+      "units": 164743,
+      "orders": 34525,
+      "lines": 36749,
+      "aov": 30211.146115,
+      "units_per_order": 4.771702,
+      "asp": 6331.314955,
+      "orders_yoy_pct": -1.020613,
+      "aov_yoy_pct": -0.06801,
+      "units_yoy_pct": -1.280561
+    },
+    {
+      "year": 2022,
+      "revenue": 1169748831.69,
+      "cogs": 1020420163.97,
+      "days": 365,
+      "gross_margin_rate": 0.127659,
+      "revenue_yoy_pct": 12.148051,
+      "item_revenue": 1169748831.69,
+      "units": 171088,
+      "orders": 36004,
+      "lines": 38068,
+      "aov": 32489.413168,
+      "units_per_order": 4.751916,
+      "asp": 6837.117926,
+      "orders_yoy_pct": 4.283852,
+      "aov_yoy_pct": 7.541147,
+      "units_yoy_pct": 3.851453
+    }
+  ],
+  "regime": {
+    "pre_2019_daily_mean": 5070140.950215008,
+    "post_2019_daily_mean": 3014443.70405202,
+    "post_vs_pre_drop": 0.4054516957907872,
+    "revenue_yoy_2019_pct": -38.55534060601422,
+    "orders_yoy_2019_pct": -40.151057401812686,
+    "units_yoy_2019_pct": -39.98063060128063,
+    "aov_yoy_2019_pct": 2.666240582580981,
+    "revenue_yoy_2022_pct": 12.148051270463277
+  },
+  "seasonality": {
+    "monthly_deviation_pct": {
+      "1": -39.552,
+      "2": -18.798,
+      "3": 14.968,
+      "4": 52.405,
+      "5": 53.395,
+      "6": 49.935,
+      "7": 8.706,
+      "8": 3.607,
+      "9": -11.402,
+      "10": -22.952,
+      "11": -39.082,
+      "12": -41.11
+    },
+    "best_month": 5,
+    "best_month_lift_pct": 53.395251418135814,
+    "worst_month": 12,
+    "worst_month_lift_pct": -41.11045985591322
+  },
+  "category_peak_months": {
+    "GenZ": {
+      "month": 6,
+      "category_month_share": 0.146091
+    },
+    "Streetwear": {
+      "month": 5,
+      "category_month_share": 0.129421
+    },
+    "Casual": {
+      "month": 5,
+      "category_month_share": 0.1255
+    },
+    "Outdoor": {
+      "month": 12,
+      "category_month_share": 0.1151
+    }
+  },
+  "category_summary": [
+    {
+      "category": "Streetwear",
+      "revenue": 13131346352.62,
+      "cogs": 11392669587.623722,
+      "margin": 1738676764.996278,
+      "units": 1768826,
+      "orders": 389543,
+      "products": 877,
+      "revenue_share": 0.799207,
+      "margin_rate": 0.132407
+    },
+    {
+      "category": "Outdoor",
+      "revenue": 2494882754.2,
+      "cogs": 2086362704.837416,
+      "margin": 408520049.362584,
+      "units": 1170000,
+      "orders": 200454,
+      "products": 496,
+      "revenue_share": 0.151845,
+      "margin_rate": 0.163743
+    },
+    {
+      "category": "Casual",
+      "revenue": 460648383.35,
+      "cogs": 406544428.515459,
+      "margin": 54103954.834541,
+      "units": 107469,
+      "orders": 23600,
+      "products": 114,
+      "revenue_share": 0.028036,
+      "margin_rate": 0.117452
+    },
+    {
+      "category": "GenZ",
+      "revenue": 343599095.36,
+      "cogs": 277873798.151267,
+      "margin": 65725297.208733,
+      "units": 166848,
+      "orders": 37054,
+      "products": 111,
+      "revenue_share": 0.020912,
+      "margin_rate": 0.191285
+    }
+  ],
+  "category_hhi": 0.6630114921688751,
+  "top_margin_products": [
+    {
+      "product_id": 438,
+      "product_name": "SaigonFlex UM-43",
+      "category": "Streetwear",
+      "segment": "Balanced",
+      "revenue": 340706262.89,
+      "margin": 130456863.28015,
+      "units": 31471,
+      "orders": 7053,
+      "promo_revenue": 116706119.57,
+      "discount": 15691385.26,
+      "margin_rate": 0.382901,
+      "promo_revenue_share": 0.342542
+    },
+    {
+      "product_id": 2045,
+      "product_name": "UrbanVN UE-05",
+      "category": "Streetwear",
+      "segment": "Performance",
+      "revenue": 185081235.24,
+      "margin": 77679322.999712,
+      "units": 35844,
+      "orders": 7924,
+      "promo_revenue": 60441474.11,
+      "discount": 8044983.75,
+      "margin_rate": 0.419704,
+      "promo_revenue_share": 0.326567
+    },
+    {
+      "product_id": 604,
+      "product_name": "SaigonFlex UC-69",
+      "category": "Streetwear",
+      "segment": "Everyday",
+      "revenue": 207930650.93,
+      "margin": 56687703.046006,
+      "units": 36515,
+      "orders": 8115,
+      "promo_revenue": 66159581.73,
+      "discount": 8934009.41,
+      "margin_rate": 0.272628,
+      "promo_revenue_share": 0.318181
+    },
+    {
+      "product_id": 443,
+      "product_name": "SaigonFlex UM-48",
+      "category": "Streetwear",
+      "segment": "Balanced",
+      "revenue": 123951425.76,
+      "margin": 47496347.628619,
+      "units": 12379,
+      "orders": 2754,
+      "promo_revenue": 39808896.84,
+      "discount": 5214136.25,
+      "margin_rate": 0.383185,
+      "promo_revenue_share": 0.321165
+    },
+    {
+      "product_id": 433,
+      "product_name": "SaigonFlex UM-38",
+      "category": "Streetwear",
+      "segment": "Balanced",
+      "revenue": 114003899.18,
+      "margin": 43598336.523152,
+      "units": 10760,
+      "orders": 2412,
+      "promo_revenue": 37524438.99,
+      "discount": 4951873.67,
+      "margin_rate": 0.382428,
+      "promo_revenue_share": 0.32915
+    },
+    {
+      "product_id": 733,
+      "product_name": "HanoiStreet RP-21",
+      "category": "Outdoor",
+      "segment": "Activewear",
+      "revenue": 93285191.87,
+      "margin": 41715521.631384,
+      "units": 22565,
+      "orders": 5051,
+      "promo_revenue": 30718930.13,
+      "discount": 4567717.82,
+      "margin_rate": 0.447183,
+      "promo_revenue_share": 0.329301
+    },
+    {
+      "product_id": 475,
+      "product_name": "SaigonFlex UM-80",
+      "category": "Streetwear",
+      "segment": "Balanced",
+      "revenue": 267387485.24,
+      "margin": 39369572.417046,
+      "units": 22709,
+      "orders": 4982,
+      "promo_revenue": 78454126.94,
+      "discount": 10835387.0,
+      "margin_rate": 0.147238,
+      "promo_revenue_share": 0.29341
+    },
+    {
+      "product_id": 499,
+      "product_name": "SaigonFlex UM-04",
+      "category": "Streetwear",
+      "segment": "Balanced",
+      "revenue": 90690297.09,
+      "margin": 35327429.25233,
+      "units": 8590,
+      "orders": 1946,
+      "promo_revenue": 26707510.95,
+      "discount": 3706485.93,
+      "margin_rate": 0.389539,
+      "promo_revenue_share": 0.294491
+    },
+    {
+      "product_id": 487,
+      "product_name": "SaigonFlex UM-92",
+      "category": "Streetwear",
+      "segment": "Balanced",
+      "revenue": 398213557.45,
+      "margin": 31242459.94372,
+      "units": 33277,
+      "orders": 7418,
+      "promo_revenue": 136602927.56,
+      "discount": 17744843.04,
+      "margin_rate": 0.078457,
+      "promo_revenue_share": 0.343039
+    },
+    {
+      "product_id": 2332,
+      "product_name": "VietMotion UE-06",
+      "category": "Streetwear",
+      "segment": "Performance",
+      "revenue": 177882160.84,
+      "margin": 28400602.857943,
+      "units": 32821,
+      "orders": 7276,
+      "promo_revenue": 55095133.07,
+      "discount": 7514919.37,
+      "margin_rate": 0.15966,
+      "promo_revenue_share": 0.309728
+    }
+  ],
+  "promotion": {
+    "bucket_stats": [
+      {
+        "promo_bucket": "<10%",
+        "count": 2160,
+        "mean": 4537167.029,
+        "median": 3822972.375
+      },
+      {
+        "promo_bucket": "10-25%",
+        "count": 72,
+        "mean": 4569057.9808,
+        "median": 3729726.03
+      },
+      {
+        "promo_bucket": "25-50%",
+        "count": 176,
+        "mean": 4138429.8171,
+        "median": 3723075.885
+      },
+      {
+        "promo_bucket": ">50%",
+        "count": 1425,
+        "mean": 3910778.9337,
+        "median": 3313547.73
+      }
+    ],
+    "heavy_vs_light_median_drop": 0.13325355117168483,
+    "daily_spearman_revenue_promo_share": -0.1135788724052546,
+    "promo_line_revenue_share": 0.33081435613479904,
+    "promo_by_channel": [
+      {
+        "promo_type": "fixed",
+        "promo_channel": "online",
+        "promos": 5,
+        "avg_discount": 50.0,
+        "avg_duration_days": 35.0,
+        "stackable_share": 0.0
+      },
+      {
+        "promo_type": "percentage",
+        "promo_channel": "all_channels",
+        "promos": 19,
+        "avg_discount": 15.7895,
+        "avg_duration_days": 39.1053,
+        "stackable_share": 0.2632
+      },
+      {
+        "promo_type": "percentage",
+        "promo_channel": "email",
+        "promos": 7,
+        "avg_discount": 10.5714,
+        "avg_duration_days": 32.7143,
+        "stackable_share": 0.4286
+      },
+      {
+        "promo_type": "percentage",
+        "promo_channel": "in_store",
+        "promos": 5,
+        "avg_discount": 15.0,
+        "avg_duration_days": 30.8,
+        "stackable_share": 0.2
+      },
+      {
+        "promo_type": "percentage",
+        "promo_channel": "online",
+        "promos": 8,
+        "avg_discount": 14.75,
+        "avg_duration_days": 30.75,
+        "stackable_share": 0.25
+      },
+      {
+        "promo_type": "percentage",
+        "promo_channel": "social_media",
+        "promos": 6,
+        "avg_discount": 18.0,
+        "avg_duration_days": 30.0,
+        "stackable_share": 0.1667
+      }
+    ]
+  },
+  "customer_channel_payment": {
+    "customers_with_orders": 90246,
+    "top20_customer_revenue_share": 0.6062323603809655,
+    "repeat_customer_share": 0.7522549475877047,
+    "mean_orders_per_customer": 7.168683376548545,
+    "median_orders_per_customer": 4.0,
+    "order_source": [
+      {
+        "order_source": "organic_search",
+        "revenue": 4595516710.89,
+        "margin": 635104309.042066,
+        "units": 900974,
+        "orders": 181495,
+        "revenue_share": 0.279695,
+        "margin_rate": 0.138201
+      },
+      {
+        "order_source": "paid_search",
+        "revenue": 3606943186.84,
+        "margin": 496923803.077642,
+        "units": 703540,
+        "orders": 141652,
+        "revenue_share": 0.219528,
+        "margin_rate": 0.137769
+      },
+      {
+        "order_source": "social_media",
+        "revenue": 3289598707.91,
+        "margin": 453262171.11106,
+        "units": 643456,
+        "orders": 129710,
+        "revenue_share": 0.200213,
+        "margin_rate": 0.137786
+      },
+      {
+        "order_source": "email_campaign",
+        "revenue": 1972621080.36,
+        "margin": 274454703.422291,
+        "units": 386696,
+        "orders": 77572,
+        "revenue_share": 0.120059,
+        "margin_rate": 0.139132
+      },
+      {
+        "order_source": "referral",
+        "revenue": 1640764179.79,
+        "margin": 223848073.810008,
+        "units": 321022,
+        "orders": 64565,
+        "revenue_share": 0.099861,
+        "margin_rate": 0.136429
+      },
+      {
+        "order_source": "direct",
+        "revenue": 1325032719.74,
+        "margin": 183433005.939068,
+        "units": 257455,
+        "orders": 51951,
+        "revenue_share": 0.080645,
+        "margin_rate": 0.138437
+      }
+    ],
+    "payments": [
+      {
+        "payment_method": "credit_card",
+        "value": 8630069413.19,
+        "orders": 356352,
+        "avg_installments": 3.880399,
+        "value_share": 0.550357
+      },
+      {
+        "payment_method": "paypal",
+        "value": 2363680137.73,
+        "orders": 97018,
+        "avg_installments": 3.878425,
+        "value_share": 0.150737
+      },
+      {
+        "payment_method": "cod",
+        "value": 2346947592.93,
+        "orders": 96681,
+        "avg_installments": 1.0,
+        "value_share": 0.149669
+      },
+      {
+        "payment_method": "apple_pay",
+        "value": 1564269610.5,
+        "orders": 64763,
+        "avg_installments": 3.880719,
+        "value_share": 0.099757
+      },
+      {
+        "payment_method": "bank_transfer",
+        "value": 775902511.08,
+        "orders": 32131,
+        "avg_installments": 3.852977,
+        "value_share": 0.049481
+      }
+    ],
+    "customer_signups": {
+      "2012": 957,
+      "2013": 2989,
+      "2014": 5034,
+      "2015": 7133,
+      "2016": 9202,
+      "2017": 11078,
+      "2018": 13011,
+      "2019": 15058,
+      "2020": 17211,
+      "2021": 19154,
+      "2022": 21103
+    }
+  },
+  "returns_experience": {
+    "return_reason": [
+      {
+        "return_reason": "wrong_size",
+        "return_quantity": 38042,
+        "refund_amount": 176687200.75,
+        "return_rows": 13967,
+        "quantity_share": 0.347143,
+        "refund_share": 0.346039
+      },
+      {
+        "return_reason": "defective",
+        "return_quantity": 22274,
+        "refund_amount": 103599143.26,
+        "return_rows": 8020,
+        "quantity_share": 0.203256,
+        "refund_share": 0.202897
+      },
+      {
+        "return_reason": "not_as_described",
+        "return_quantity": 19358,
+        "refund_amount": 90653190.78,
+        "return_rows": 7035,
+        "quantity_share": 0.176647,
+        "refund_share": 0.177543
+      },
+      {
+        "return_reason": "changed_mind",
+        "return_quantity": 19144,
+        "refund_amount": 89721759.0,
+        "return_rows": 6931,
+        "quantity_share": 0.174694,
+        "refund_share": 0.175719
+      },
+      {
+        "return_reason": "late_delivery",
+        "return_quantity": 10768,
+        "refund_amount": 49937212.76,
+        "return_rows": 3986,
+        "quantity_share": 0.098261,
+        "refund_share": 0.097801
+      }
+    ],
+    "return_category": [
+      {
+        "category": "Casual",
+        "return_quantity": 3499,
+        "refund_amount": 14027094.37,
+        "sold_quantity": 107469,
+        "return_rate": 0.032558
+      },
+      {
+        "category": "GenZ",
+        "return_quantity": 5869,
+        "refund_amount": 11145648.17,
+        "sold_quantity": 166848,
+        "return_rate": 0.035176
+      },
+      {
+        "category": "Outdoor",
+        "return_quantity": 40417,
+        "refund_amount": 78717514.88,
+        "sold_quantity": 1170000,
+        "return_rate": 0.034544
+      },
+      {
+        "category": "Streetwear",
+        "return_quantity": 59801,
+        "refund_amount": 406708249.13,
+        "sold_quantity": 1768826,
+        "return_rate": 0.033808
+      }
+    ],
+    "rating_category": [
+      {
+        "category": "Casual",
+        "mean": 3.923219,
+        "count": 3790
+      },
+      {
+        "category": "GenZ",
+        "mean": 3.922825,
+        "count": 5792
+      },
+      {
+        "category": "Outdoor",
+        "mean": 3.933891,
+        "count": 41265
+      },
+      {
+        "category": "Streetwear",
+        "mean": 3.939398,
+        "count": 62704
+      }
+    ],
+    "delivery_days_mean": 4.499209457537712,
+    "delivery_days_median": 4.0,
+    "delivery_rating_corr": -0.005792651173553513,
+    "delivery_rating": [
+      {
+        "delivery_bucket": "0-2",
+        "count": 18634,
+        "mean": 3.939278
+      },
+      {
+        "delivery_bucket": "3-4",
+        "count": 36921,
+        "mean": 3.948661
+      },
+      {
+        "delivery_bucket": "5-7",
+        "count": 55814,
+        "mean": 3.927148
+      }
+    ]
+  },
+  "geography": {
+    "region_total": [
+      {
+        "region": "East",
+        "revenue": 7637532676.2,
+        "orders": 294612,
+        "revenue_share": 0.464839
+      },
+      {
+        "region": "Central",
+        "revenue": 4941908471.68,
+        "orders": 184691,
+        "revenue_share": 0.300777
+      },
+      {
+        "region": "West",
+        "revenue": 3851035437.65,
+        "orders": 167642,
+        "revenue_share": 0.234384
+      }
+    ],
+    "region_category": [
+      {
+        "region": "Central",
+        "category": "Casual",
+        "line_revenue": 107972122.53,
+        "region_revenue": 4941908471.68,
+        "category_share_in_region": 0.021848
+      },
+      {
+        "region": "Central",
+        "category": "GenZ",
+        "line_revenue": 102175539.1,
+        "region_revenue": 4941908471.68,
+        "category_share_in_region": 0.020675
+      },
+      {
+        "region": "Central",
+        "category": "Outdoor",
+        "line_revenue": 582478919.93,
+        "region_revenue": 4941908471.68,
+        "category_share_in_region": 0.117865
+      },
+      {
+        "region": "Central",
+        "category": "Streetwear",
+        "line_revenue": 4149281890.12,
+        "region_revenue": 4941908471.68,
+        "category_share_in_region": 0.839611
+      },
+      {
+        "region": "East",
+        "category": "Casual",
+        "line_revenue": 167828262.59,
+        "region_revenue": 7637532676.200001,
+        "category_share_in_region": 0.021974
+      },
+      {
+        "region": "East",
+        "category": "GenZ",
+        "line_revenue": 161224392.05,
+        "region_revenue": 7637532676.200001,
+        "category_share_in_region": 0.021109
+      },
+      {
+        "region": "East",
+        "category": "Outdoor",
+        "line_revenue": 902749958.72,
+        "region_revenue": 7637532676.200001,
+        "category_share_in_region": 0.118199
+      },
+      {
+        "region": "East",
+        "category": "Streetwear",
+        "line_revenue": 6405730062.84,
+        "region_revenue": 7637532676.200001,
+        "category_share_in_region": 0.838717
+      },
+      {
+        "region": "West",
+        "category": "Casual",
+        "line_revenue": 184847998.23,
+        "region_revenue": 3851035437.65,
+        "category_share_in_region": 0.048
+      },
+      {
+        "region": "West",
+        "category": "GenZ",
+        "line_revenue": 80199164.21,
+        "region_revenue": 3851035437.65,
+        "category_share_in_region": 0.020825
+      },
+      {
+        "region": "West",
+        "category": "Outdoor",
+        "line_revenue": 1009653875.55,
+        "region_revenue": 3851035437.65,
+        "category_share_in_region": 0.262177
+      },
+      {
+        "region": "West",
+        "category": "Streetwear",
+        "line_revenue": 2576334399.66,
+        "region_revenue": 3851035437.65,
+        "category_share_in_region": 0.668998
+      }
+    ]
+  },
+  "inventory": {
+    "monthly": [
+      {
+        "year": 2012,
+        "month": 7,
+        "stockout_rate": 0.668354,
+        "overstock_rate": 0.594937,
+        "mean_fill_rate": 0.966075,
+        "mean_sell_through": 0.243548
+      },
+      {
+        "year": 2012,
+        "month": 8,
+        "stockout_rate": 0.70922,
+        "overstock_rate": 0.340426,
+        "mean_fill_rate": 0.944919,
+        "mean_sell_through": 0.288848
+      },
+      {
+        "year": 2012,
+        "month": 9,
+        "stockout_rate": 0.646226,
+        "overstock_rate": 0.575472,
+        "mean_fill_rate": 0.950001,
+        "mean_sell_through": 0.243615
+      },
+      {
+        "year": 2012,
+        "month": 10,
+        "stockout_rate": 0.645309,
+        "overstock_rate": 0.645309,
+        "mean_fill_rate": 0.952631,
+        "mean_sell_through": 0.220611
+      },
+      {
+        "year": 2012,
+        "month": 11,
+        "stockout_rate": 0.717762,
+        "overstock_rate": 0.686131,
+        "mean_fill_rate": 0.959855,
+        "mean_sell_through": 0.195454
+      },
+      {
+        "year": 2012,
+        "month": 12,
+        "stockout_rate": 0.703786,
+        "overstock_rate": 0.57461,
+        "mean_fill_rate": 0.950556,
+        "mean_sell_through": 0.229099
+      },
+      {
+        "year": 2013,
+        "month": 1,
+        "stockout_rate": 0.638298,
+        "overstock_rate": 0.744681,
+        "mean_fill_rate": 0.966037,
+        "mean_sell_through": 0.178311
+      },
+      {
+        "year": 2013,
+        "month": 2,
+        "stockout_rate": 0.711061,
+        "overstock_rate": 0.672686,
+        "mean_fill_rate": 0.956056,
+        "mean_sell_through": 0.207145
+      },
+      {
+        "year": 2013,
+        "month": 3,
+        "stockout_rate": 0.705495,
+        "overstock_rate": 0.604396,
+        "mean_fill_rate": 0.956995,
+        "mean_sell_through": 0.224681
+      },
+      {
+        "year": 2013,
+        "month": 4,
+        "stockout_rate": 0.701461,
+        "overstock_rate": 0.430063,
+        "mean_fill_rate": 0.953099,
+        "mean_sell_through": 0.275472
+      },
+      {
+        "year": 2013,
+        "month": 5,
+        "stockout_rate": 0.681435,
+        "overstock_rate": 0.533755,
+        "mean_fill_rate": 0.955977,
+        "mean_sell_through": 0.244962
+      },
+      {
+        "year": 2013,
+        "month": 6,
+        "stockout_rate": 0.66383,
+        "overstock_rate": 0.589362,
+        "mean_fill_rate": 0.963263,
+        "mean_sell_through": 0.230266
+      },
+      {
+        "year": 2013,
+        "month": 7,
+        "stockout_rate": 0.686567,
+        "overstock_rate": 0.641791,
+        "mean_fill_rate": 0.961689,
+        "mean_sell_through": 0.216677
+      },
+      {
+        "year": 2013,
+        "month": 8,
+        "stockout_rate": 0.654428,
+        "overstock_rate": 0.658747,
+        "mean_fill_rate": 0.961987,
+        "mean_sell_through": 0.211489
+      },
+      {
+        "year": 2013,
+        "month": 9,
+        "stockout_rate": 0.647423,
+        "overstock_rate": 0.762887,
+        "mean_fill_rate": 0.96598,
+        "mean_sell_through": 0.183943
+      },
+      {
+        "year": 2013,
+        "month": 10,
+        "stockout_rate": 0.679325,
+        "overstock_rate": 0.778481,
+        "mean_fill_rate": 0.956891,
+        "mean_sell_through": 0.165544
+      },
+      {
+        "year": 2013,
+        "month": 11,
+        "stockout_rate": 0.679739,
+        "overstock_rate": 0.788671,
+        "mean_fill_rate": 0.953886,
+        "mean_sell_through": 0.155431
+      },
+      {
+        "year": 2013,
+        "month": 12,
+        "stockout_rate": 0.691176,
+        "overstock_rate": 0.735294,
+        "mean_fill_rate": 0.943838,
+        "mean_sell_through": 0.180734
+      },
+      {
+        "year": 2014,
+        "month": 1,
+        "stockout_rate": 0.688488,
+        "overstock_rate": 0.803612,
+        "mean_fill_rate": 0.963433,
+        "mean_sell_through": 0.141612
+      },
+      {
+        "year": 2014,
+        "month": 2,
+        "stockout_rate": 0.670259,
+        "overstock_rate": 0.769397,
+        "mean_fill_rate": 0.962427,
+        "mean_sell_through": 0.158166
+      },
+      {
+        "year": 2014,
+        "month": 3,
+        "stockout_rate": 0.66736,
+        "overstock_rate": 0.700624,
+        "mean_fill_rate": 0.958213,
+        "mean_sell_through": 0.194015
+      },
+      {
+        "year": 2014,
+        "month": 4,
+        "stockout_rate": 0.705078,
+        "overstock_rate": 0.597656,
+        "mean_fill_rate": 0.949413,
+        "mean_sell_through": 0.237089
+      },
+      {
+        "year": 2014,
+        "month": 5,
+        "stockout_rate": 0.70217,
+        "overstock_rate": 0.64497,
+        "mean_fill_rate": 0.952858,
+        "mean_sell_through": 0.223013
+      },
+      {
+        "year": 2014,
+        "month": 6,
+        "stockout_rate": 0.658683,
+        "overstock_rate": 0.706587,
+        "mean_fill_rate": 0.962342,
+        "mean_sell_through": 0.194015
+      },
+      {
+        "year": 2014,
+        "month": 7,
+        "stockout_rate": 0.683673,
+        "overstock_rate": 0.769388,
+        "mean_fill_rate": 0.965035,
+        "mean_sell_through": 0.17539
+      },
+      {
+        "year": 2014,
+        "month": 8,
+        "stockout_rate": 0.646602,
+        "overstock_rate": 0.693204,
+        "mean_fill_rate": 0.960001,
+        "mean_sell_through": 0.196473
+      },
+      {
+        "year": 2014,
+        "month": 9,
+        "stockout_rate": 0.684211,
+        "overstock_rate": 0.804211,
+        "mean_fill_rate": 0.95986,
+        "mean_sell_through": 0.1489
+      },
+      {
+        "year": 2014,
+        "month": 10,
+        "stockout_rate": 0.694444,
+        "overstock_rate": 0.83547,
+        "mean_fill_rate": 0.959542,
+        "mean_sell_through": 0.143518
+      },
+      {
+        "year": 2014,
+        "month": 11,
+        "stockout_rate": 0.660832,
+        "overstock_rate": 0.844639,
+        "mean_fill_rate": 0.965572,
+        "mean_sell_through": 0.131828
+      },
+      {
+        "year": 2014,
+        "month": 12,
+        "stockout_rate": 0.651899,
+        "overstock_rate": 0.746835,
+        "mean_fill_rate": 0.961746,
+        "mean_sell_through": 0.162554
+      },
+      {
+        "year": 2015,
+        "month": 1,
+        "stockout_rate": 0.707048,
+        "overstock_rate": 0.843612,
+        "mean_fill_rate": 0.961233,
+        "mean_sell_through": 0.128793
+      },
+      {
+        "year": 2015,
+        "month": 2,
+        "stockout_rate": 0.659292,
+        "overstock_rate": 0.838496,
+        "mean_fill_rate": 0.961724,
+        "mean_sell_through": 0.143063
+      },
+      {
+        "year": 2015,
+        "month": 3,
+        "stockout_rate": 0.613169,
+        "overstock_rate": 0.792181,
+        "mean_fill_rate": 0.963785,
+        "mean_sell_through": 0.16077
+      },
+      {
+        "year": 2015,
+        "month": 4,
+        "stockout_rate": 0.696673,
+        "overstock_rate": 0.639922,
+        "mean_fill_rate": 0.949119,
+        "mean_sell_through": 0.219131
+      },
+      {
+        "year": 2015,
+        "month": 5,
+        "stockout_rate": 0.670588,
+        "overstock_rate": 0.737255,
+        "mean_fill_rate": 0.959084,
+        "mean_sell_through": 0.178499
+      },
+      {
+        "year": 2015,
+        "month": 6,
+        "stockout_rate": 0.66129,
+        "overstock_rate": 0.756048,
+        "mean_fill_rate": 0.962367,
+        "mean_sell_through": 0.175551
+      },
+      {
+        "year": 2015,
+        "month": 7,
+        "stockout_rate": 0.661943,
+        "overstock_rate": 0.799595,
+        "mean_fill_rate": 0.964236,
+        "mean_sell_through": 0.157192
+      },
+      {
+        "year": 2015,
+        "month": 8,
+        "stockout_rate": 0.651163,
+        "overstock_rate": 0.738372,
+        "mean_fill_rate": 0.959046,
+        "mean_sell_through": 0.173031
+      },
+      {
+        "year": 2015,
+        "month": 9,
+        "stockout_rate": 0.687375,
+        "overstock_rate": 0.777555,
+        "mean_fill_rate": 0.955174,
+        "mean_sell_through": 0.164631
+      },
+      {
+        "year": 2015,
+        "month": 10,
+        "stockout_rate": 0.680162,
+        "overstock_rate": 0.817814,
+        "mean_fill_rate": 0.963359,
+        "mean_sell_through": 0.13995
+      },
+      {
+        "year": 2015,
+        "month": 11,
+        "stockout_rate": 0.725367,
+        "overstock_rate": 0.834382,
+        "mean_fill_rate": 0.961705,
+        "mean_sell_through": 0.133586
+      },
+      {
+        "year": 2015,
+        "month": 12,
+        "stockout_rate": 0.689441,
+        "overstock_rate": 0.795031,
+        "mean_fill_rate": 0.959006,
+        "mean_sell_through": 0.147175
+      },
+      {
+        "year": 2016,
+        "month": 1,
+        "stockout_rate": 0.702991,
+        "overstock_rate": 0.846154,
+        "mean_fill_rate": 0.96389,
+        "mean_sell_through": 0.124516
+      },
+      {
+        "year": 2016,
+        "month": 2,
+        "stockout_rate": 0.675105,
+        "overstock_rate": 0.810127,
+        "mean_fill_rate": 0.963574,
+        "mean_sell_through": 0.134101
+      },
+      {
+        "year": 2016,
+        "month": 3,
+        "stockout_rate": 0.674847,
+        "overstock_rate": 0.785276,
+        "mean_fill_rate": 0.961829,
+        "mean_sell_through": 0.152553
+      },
+      {
+        "year": 2016,
+        "month": 4,
+        "stockout_rate": 0.646602,
+        "overstock_rate": 0.658252,
+        "mean_fill_rate": 0.957928,
+        "mean_sell_through": 0.201948
+      },
+      {
+        "year": 2016,
+        "month": 5,
+        "stockout_rate": 0.684631,
+        "overstock_rate": 0.734531,
+        "mean_fill_rate": 0.958816,
+        "mean_sell_through": 0.176151
+      },
+      {
+        "year": 2016,
+        "month": 6,
+        "stockout_rate": 0.683267,
+        "overstock_rate": 0.707171,
+        "mean_fill_rate": 0.958434,
+        "mean_sell_through": 0.184103
+      },
+      {
+        "year": 2016,
+        "month": 7,
+        "stockout_rate": 0.696787,
+        "overstock_rate": 0.777108,
+        "mean_fill_rate": 0.959302,
+        "mean_sell_through": 0.15572
+      },
+      {
+        "year": 2016,
+        "month": 8,
+        "stockout_rate": 0.678846,
+        "overstock_rate": 0.742308,
+        "mean_fill_rate": 0.954554,
+        "mean_sell_through": 0.176005
+      },
+      {
+        "year": 2016,
+        "month": 9,
+        "stockout_rate": 0.704918,
+        "overstock_rate": 0.82377,
+        "mean_fill_rate": 0.955053,
+        "mean_sell_through": 0.132797
+      },
+      {
+        "year": 2016,
+        "month": 10,
+        "stockout_rate": 0.653527,
+        "overstock_rate": 0.834025,
+        "mean_fill_rate": 0.965563,
+        "mean_sell_through": 0.131257
+      },
+      {
+        "year": 2016,
+        "month": 11,
+        "stockout_rate": 0.685832,
+        "overstock_rate": 0.831622,
+        "mean_fill_rate": 0.965161,
+        "mean_sell_through": 0.123384
+      },
+      {
+        "year": 2016,
+        "month": 12,
+        "stockout_rate": 0.662028,
+        "overstock_rate": 0.807157,
+        "mean_fill_rate": 0.961829,
+        "mean_sell_through": 0.145724
+      },
+      {
+        "year": 2017,
+        "month": 1,
+        "stockout_rate": 0.69936,
+        "overstock_rate": 0.850746,
+        "mean_fill_rate": 0.962044,
+        "mean_sell_through": 0.115194
+      },
+      {
+        "year": 2017,
+        "month": 2,
+        "stockout_rate": 0.639485,
+        "overstock_rate": 0.845494,
+        "mean_fill_rate": 0.965522,
+        "mean_sell_through": 0.116565
+      },
+      {
+        "year": 2017,
+        "month": 3,
+        "stockout_rate": 0.673267,
+        "overstock_rate": 0.782178,
+        "mean_fill_rate": 0.960592,
+        "mean_sell_through": 0.149851
+      },
+      {
+        "year": 2017,
+        "month": 4,
+        "stockout_rate": 0.687623,
+        "overstock_rate": 0.736739,
+        "mean_fill_rate": 0.960055,
+        "mean_sell_through": 0.172409
+      },
+      {
+        "year": 2017,
+        "month": 5,
+        "stockout_rate": 0.669884,
+        "overstock_rate": 0.743243,
+        "mean_fill_rate": 0.958172,
+        "mean_sell_through": 0.176385
+      },
+      {
+        "year": 2017,
+        "month": 6,
+        "stockout_rate": 0.713193,
+        "overstock_rate": 0.692161,
+        "mean_fill_rate": 0.95819,
+        "mean_sell_through": 0.188207
+      },
+      {
+        "year": 2017,
+        "month": 7,
+        "stockout_rate": 0.664078,
+        "overstock_rate": 0.803883,
+        "mean_fill_rate": 0.966084,
+        "mean_sell_through": 0.137746
+      },
+      {
+        "year": 2017,
+        "month": 8,
+        "stockout_rate": 0.655678,
+        "overstock_rate": 0.758242,
+        "mean_fill_rate": 0.960501,
+        "mean_sell_through": 0.166944
+      },
+      {
+        "year": 2017,
+        "month": 9,
+        "stockout_rate": 0.666667,
+        "overstock_rate": 0.78501,
+        "mean_fill_rate": 0.962131,
+        "mean_sell_through": 0.140673
+      },
+      {
+        "year": 2017,
+        "month": 10,
+        "stockout_rate": 0.676245,
+        "overstock_rate": 0.816092,
+        "mean_fill_rate": 0.963027,
+        "mean_sell_through": 0.136339
+      },
+      {
+        "year": 2017,
+        "month": 11,
+        "stockout_rate": 0.69697,
+        "overstock_rate": 0.832323,
+        "mean_fill_rate": 0.953196,
+        "mean_sell_through": 0.125237
+      },
+      {
+        "year": 2017,
+        "month": 12,
+        "stockout_rate": 0.691552,
+        "overstock_rate": 0.819253,
+        "mean_fill_rate": 0.955993,
+        "mean_sell_through": 0.130413
+      },
+      {
+        "year": 2018,
+        "month": 1,
+        "stockout_rate": 0.634656,
+        "overstock_rate": 0.853862,
+        "mean_fill_rate": 0.966177,
+        "mean_sell_through": 0.105362
+      },
+      {
+        "year": 2018,
+        "month": 2,
+        "stockout_rate": 0.660679,
+        "overstock_rate": 0.828343,
+        "mean_fill_rate": 0.963272,
+        "mean_sell_through": 0.12249
+      },
+      {
+        "year": 2018,
+        "month": 3,
+        "stockout_rate": 0.681641,
+        "overstock_rate": 0.763672,
+        "mean_fill_rate": 0.961459,
+        "mean_sell_through": 0.145947
+      },
+      {
+        "year": 2018,
+        "month": 4,
+        "stockout_rate": 0.698182,
+        "overstock_rate": 0.716364,
+        "mean_fill_rate": 0.960487,
+        "mean_sell_through": 0.172445
+      },
+      {
+        "year": 2018,
+        "month": 5,
+        "stockout_rate": 0.685053,
+        "overstock_rate": 0.704626,
+        "mean_fill_rate": 0.958363,
+        "mean_sell_through": 0.177781
+      },
+      {
+        "year": 2018,
+        "month": 6,
+        "stockout_rate": 0.652727,
+        "overstock_rate": 0.692727,
+        "mean_fill_rate": 0.956485,
+        "mean_sell_through": 0.19036
+      },
+      {
+        "year": 2018,
+        "month": 7,
+        "stockout_rate": 0.675676,
+        "overstock_rate": 0.745174,
+        "mean_fill_rate": 0.960874,
+        "mean_sell_through": 0.160261
+      },
+      {
+        "year": 2018,
+        "month": 8,
+        "stockout_rate": 0.666667,
+        "overstock_rate": 0.768362,
+        "mean_fill_rate": 0.964406,
+        "mean_sell_through": 0.152845
+      },
+      {
+        "year": 2018,
+        "month": 9,
+        "stockout_rate": 0.637275,
+        "overstock_rate": 0.839679,
+        "mean_fill_rate": 0.968004,
+        "mean_sell_through": 0.114892
+      },
+      {
+        "year": 2018,
+        "month": 10,
+        "stockout_rate": 0.631148,
+        "overstock_rate": 0.868852,
+        "mean_fill_rate": 0.96735,
+        "mean_sell_through": 0.101967
+      },
+      {
+        "year": 2018,
+        "month": 11,
+        "stockout_rate": 0.676471,
+        "overstock_rate": 0.929864,
+        "mean_fill_rate": 0.963195,
+        "mean_sell_through": 0.080117
+      },
+      {
+        "year": 2018,
+        "month": 12,
+        "stockout_rate": 0.668776,
+        "overstock_rate": 0.85865,
+        "mean_fill_rate": 0.963922,
+        "mean_sell_through": 0.102114
+      },
+      {
+        "year": 2019,
+        "month": 1,
+        "stockout_rate": 0.641593,
+        "overstock_rate": 0.860619,
+        "mean_fill_rate": 0.965486,
+        "mean_sell_through": 0.092758
+      },
+      {
+        "year": 2019,
+        "month": 2,
+        "stockout_rate": 0.661053,
+        "overstock_rate": 0.825263,
+        "mean_fill_rate": 0.964493,
+        "mean_sell_through": 0.110894
+      },
+      {
+        "year": 2019,
+        "month": 3,
+        "stockout_rate": 0.663883,
+        "overstock_rate": 0.807933,
+        "mean_fill_rate": 0.963187,
+        "mean_sell_through": 0.124295
+      },
+      {
+        "year": 2019,
+        "month": 4,
+        "stockout_rate": 0.669903,
+        "overstock_rate": 0.753398,
+        "mean_fill_rate": 0.963237,
+        "mean_sell_through": 0.14753
+      },
+      {
+        "year": 2019,
+        "month": 5,
+        "stockout_rate": 0.688805,
+        "overstock_rate": 0.785579,
+        "mean_fill_rate": 0.960722,
+        "mean_sell_through": 0.141033
+      },
+      {
+        "year": 2019,
+        "month": 6,
+        "stockout_rate": 0.691571,
+        "overstock_rate": 0.793103,
+        "mean_fill_rate": 0.962324,
+        "mean_sell_through": 0.136546
+      },
+      {
+        "year": 2019,
+        "month": 7,
+        "stockout_rate": 0.657787,
+        "overstock_rate": 0.813525,
+        "mean_fill_rate": 0.965915,
+        "mean_sell_through": 0.121807
+      },
+      {
+        "year": 2019,
+        "month": 8,
+        "stockout_rate": 0.68609,
+        "overstock_rate": 0.800752,
+        "mean_fill_rate": 0.963597,
+        "mean_sell_through": 0.133024
+      },
+      {
+        "year": 2019,
+        "month": 9,
+        "stockout_rate": 0.632653,
+        "overstock_rate": 0.855102,
+        "mean_fill_rate": 0.967687,
+        "mean_sell_through": 0.103229
+      },
+      {
+        "year": 2019,
+        "month": 10,
+        "stockout_rate": 0.715177,
+        "overstock_rate": 0.825364,
+        "mean_fill_rate": 0.961399,
+        "mean_sell_through": 0.106795
+      },
+      {
+        "year": 2019,
+        "month": 11,
+        "stockout_rate": 0.649165,
+        "overstock_rate": 0.892601,
+        "mean_fill_rate": 0.966588,
+        "mean_sell_through": 0.087044
+      },
+      {
+        "year": 2019,
+        "month": 12,
+        "stockout_rate": 0.663736,
+        "overstock_rate": 0.821978,
+        "mean_fill_rate": 0.967474,
+        "mean_sell_through": 0.103286
+      },
+      {
+        "year": 2020,
+        "month": 1,
+        "stockout_rate": 0.642298,
+        "overstock_rate": 0.890339,
+        "mean_fill_rate": 0.967362,
+        "mean_sell_through": 0.077145
+      },
+      {
+        "year": 2020,
+        "month": 2,
+        "stockout_rate": 0.669014,
+        "overstock_rate": 0.884977,
+        "mean_fill_rate": 0.967531,
+        "mean_sell_through": 0.086197
+      },
+      {
+        "year": 2020,
+        "month": 3,
+        "stockout_rate": 0.670732,
+        "overstock_rate": 0.813008,
+        "mean_fill_rate": 0.964703,
+        "mean_sell_through": 0.120845
+      },
+      {
+        "year": 2020,
+        "month": 4,
+        "stockout_rate": 0.68315,
+        "overstock_rate": 0.763736,
+        "mean_fill_rate": 0.958605,
+        "mean_sell_through": 0.150653
+      },
+      {
+        "year": 2020,
+        "month": 5,
+        "stockout_rate": 0.658672,
+        "overstock_rate": 0.760148,
+        "mean_fill_rate": 0.964022,
+        "mean_sell_through": 0.136905
+      },
+      {
+        "year": 2020,
+        "month": 6,
+        "stockout_rate": 0.704365,
+        "overstock_rate": 0.787698,
+        "mean_fill_rate": 0.963956,
+        "mean_sell_through": 0.127195
+      },
+      {
+        "year": 2020,
+        "month": 7,
+        "stockout_rate": 0.651639,
+        "overstock_rate": 0.803279,
+        "mean_fill_rate": 0.967625,
+        "mean_sell_through": 0.118636
+      },
+      {
+        "year": 2020,
+        "month": 8,
+        "stockout_rate": 0.670932,
+        "overstock_rate": 0.771481,
+        "mean_fill_rate": 0.966912,
+        "mean_sell_through": 0.131732
+      },
+      {
+        "year": 2020,
+        "month": 9,
+        "stockout_rate": 0.692473,
+        "overstock_rate": 0.832258,
+        "mean_fill_rate": 0.966023,
+        "mean_sell_through": 0.108461
+      },
+      {
+        "year": 2020,
+        "month": 10,
+        "stockout_rate": 0.644944,
+        "overstock_rate": 0.860674,
+        "mean_fill_rate": 0.967791,
+        "mean_sell_through": 0.096763
+      },
+      {
+        "year": 2020,
+        "month": 11,
+        "stockout_rate": 0.671642,
+        "overstock_rate": 0.890547,
+        "mean_fill_rate": 0.967,
+        "mean_sell_through": 0.081547
+      },
+      {
+        "year": 2020,
+        "month": 12,
+        "stockout_rate": 0.639013,
+        "overstock_rate": 0.849776,
+        "mean_fill_rate": 0.967488,
+        "mean_sell_through": 0.091846
+      },
+      {
+        "year": 2021,
+        "month": 1,
+        "stockout_rate": 0.67374,
+        "overstock_rate": 0.880637,
+        "mean_fill_rate": 0.966047,
+        "mean_sell_through": 0.078853
+      },
+      {
+        "year": 2021,
+        "month": 2,
+        "stockout_rate": 0.654545,
+        "overstock_rate": 0.836364,
+        "mean_fill_rate": 0.966894,
+        "mean_sell_through": 0.098607
+      },
+      {
+        "year": 2021,
+        "month": 3,
+        "stockout_rate": 0.656987,
+        "overstock_rate": 0.76225,
+        "mean_fill_rate": 0.964246,
+        "mean_sell_through": 0.13393
+      },
+      {
+        "year": 2021,
+        "month": 4,
+        "stockout_rate": 0.680657,
+        "overstock_rate": 0.69708,
+        "mean_fill_rate": 0.95815,
+        "mean_sell_through": 0.161586
+      },
+      {
+        "year": 2021,
+        "month": 5,
+        "stockout_rate": 0.708758,
+        "overstock_rate": 0.714868,
+        "mean_fill_rate": 0.958519,
+        "mean_sell_through": 0.154991
+      },
+      {
+        "year": 2021,
+        "month": 6,
+        "stockout_rate": 0.7,
+        "overstock_rate": 0.734615,
+        "mean_fill_rate": 0.95859,
+        "mean_sell_through": 0.15546
+      },
+      {
+        "year": 2021,
+        "month": 7,
+        "stockout_rate": 0.657505,
+        "overstock_rate": 0.744186,
+        "mean_fill_rate": 0.964835,
+        "mean_sell_through": 0.144249
+      },
+      {
+        "year": 2021,
+        "month": 8,
+        "stockout_rate": 0.710472,
+        "overstock_rate": 0.73922,
+        "mean_fill_rate": 0.955922,
+        "mean_sell_through": 0.153392
+      },
+      {
+        "year": 2021,
+        "month": 9,
+        "stockout_rate": 0.644444,
+        "overstock_rate": 0.757778,
+        "mean_fill_rate": 0.962518,
+        "mean_sell_through": 0.132614
+      },
+      {
+        "year": 2021,
+        "month": 10,
+        "stockout_rate": 0.648837,
+        "overstock_rate": 0.774419,
+        "mean_fill_rate": 0.963023,
+        "mean_sell_through": 0.125136
+      },
+      {
+        "year": 2021,
+        "month": 11,
+        "stockout_rate": 0.676093,
+        "overstock_rate": 0.822622,
+        "mean_fill_rate": 0.965467,
+        "mean_sell_through": 0.109714
+      },
+      {
+        "year": 2021,
+        "month": 12,
+        "stockout_rate": 0.684327,
+        "overstock_rate": 0.759382,
+        "mean_fill_rate": 0.961955,
+        "mean_sell_through": 0.136344
+      },
+      {
+        "year": 2022,
+        "month": 1,
+        "stockout_rate": 0.582474,
+        "overstock_rate": 0.819588,
+        "mean_fill_rate": 0.969329,
+        "mean_sell_through": 0.110116
+      },
+      {
+        "year": 2022,
+        "month": 2,
+        "stockout_rate": 0.680751,
+        "overstock_rate": 0.748826,
+        "mean_fill_rate": 0.964317,
+        "mean_sell_through": 0.13668
+      },
+      {
+        "year": 2022,
+        "month": 3,
+        "stockout_rate": 0.681435,
+        "overstock_rate": 0.727848,
+        "mean_fill_rate": 0.962802,
+        "mean_sell_through": 0.152192
+      },
+      {
+        "year": 2022,
+        "month": 4,
+        "stockout_rate": 0.701613,
+        "overstock_rate": 0.681452,
+        "mean_fill_rate": 0.957932,
+        "mean_sell_through": 0.173976
+      },
+      {
+        "year": 2022,
+        "month": 5,
+        "stockout_rate": 0.661856,
+        "overstock_rate": 0.713402,
+        "mean_fill_rate": 0.964744,
+        "mean_sell_through": 0.158398
+      },
+      {
+        "year": 2022,
+        "month": 6,
+        "stockout_rate": 0.674569,
+        "overstock_rate": 0.696121,
+        "mean_fill_rate": 0.963939,
+        "mean_sell_through": 0.158255
+      },
+      {
+        "year": 2022,
+        "month": 7,
+        "stockout_rate": 0.692683,
+        "overstock_rate": 0.74878,
+        "mean_fill_rate": 0.96496,
+        "mean_sell_through": 0.13933
+      },
+      {
+        "year": 2022,
+        "month": 8,
+        "stockout_rate": 0.652928,
+        "overstock_rate": 0.726681,
+        "mean_fill_rate": 0.96522,
+        "mean_sell_through": 0.144234
+      },
+      {
+        "year": 2022,
+        "month": 9,
+        "stockout_rate": 0.642005,
+        "overstock_rate": 0.811456,
+        "mean_fill_rate": 0.966984,
+        "mean_sell_through": 0.118721
+      },
+      {
+        "year": 2022,
+        "month": 10,
+        "stockout_rate": 0.655257,
+        "overstock_rate": 0.858191,
+        "mean_fill_rate": 0.961776,
+        "mean_sell_through": 0.114488
+      },
+      {
+        "year": 2022,
+        "month": 11,
+        "stockout_rate": 0.696809,
+        "overstock_rate": 0.869681,
+        "mean_fill_rate": 0.959929,
+        "mean_sell_through": 0.1047
+      },
+      {
+        "year": 2022,
+        "month": 12,
+        "stockout_rate": 0.67217,
+        "overstock_rate": 0.804245,
+        "mean_fill_rate": 0.961244,
+        "mean_sell_through": 0.118345
+      }
+    ],
+    "stockout_2022_avg": 0.6662123917312995,
+    "overstock_2022_avg": 0.7671892243164775,
+    "sell_through_2022_avg": 0.13578613175415885,
+    "high_demand_stockout": [
+      {
+        "product_id": 660,
+        "avg_stockout": 0.92,
+        "avg_overstock": 0.52,
+        "avg_days_supply": 2233.812,
+        "avg_sell_through": 0.254484,
+        "avg_fill_rate": 0.854672,
+        "avg_stock": 160.28,
+        "product_name": "SaigonFlex UC-25",
+        "category": "Streetwear",
+        "units": 3993.0,
+        "revenue": 31192781.94,
+        "margin": 7806810.521482
+      },
+      {
+        "product_id": 2251,
+        "avg_stockout": 0.864865,
+        "avg_overstock": 0.783784,
+        "avg_days_supply": 1371.648649,
+        "avg_sell_through": 0.115086,
+        "avg_fill_rate": 0.954054,
+        "avg_stock": 172.72973,
+        "product_name": "VietMotion RP-48",
+        "category": "Outdoor",
+        "units": 2668.0,
+        "revenue": 3892237.84,
+        "margin": 822421.082692
+      },
+      {
+        "product_id": 420,
+        "avg_stockout": 0.857143,
+        "avg_overstock": 0.52381,
+        "avg_days_supply": 792.461905,
+        "avg_sell_through": 0.236476,
+        "avg_fill_rate": 0.919043,
+        "avg_stock": 84.714286,
+        "product_name": "SaigonFlex UM-25",
+        "category": "Streetwear",
+        "units": 1755.0,
+        "revenue": 23556147.39,
+        "margin": -907035.988846
+      },
+      {
+        "product_id": 563,
+        "avg_stockout": 0.833333,
+        "avg_overstock": 0.166667,
+        "avg_days_supply": 62.927778,
+        "avg_sell_through": 0.405356,
+        "avg_fill_rate": 0.849989,
+        "avg_stock": 47.555556,
+        "product_name": "SaigonFlex UC-28",
+        "category": "Streetwear",
+        "units": 1716.0,
+        "revenue": 14995082.97,
+        "margin": -402310.500743
+      },
+      {
+        "product_id": 1819,
+        "avg_stockout": 0.791667,
+        "avg_overstock": 0.930556,
+        "avg_days_supply": 1267.452778,
+        "avg_sell_through": 0.080636,
+        "avg_fill_rate": 0.958793,
+        "avg_stock": 116.430556,
+        "product_name": "SaigonCore YY-14",
+        "category": "GenZ",
+        "units": 2194.0,
+        "revenue": 6617416.76,
+        "margin": 1235513.46912
+      },
+      {
+        "product_id": 1165,
+        "avg_stockout": 0.790698,
+        "avg_overstock": 0.860465,
+        "avg_days_supply": 2391.569767,
+        "avg_sell_through": 0.116802,
+        "avg_fill_rate": 0.958137,
+        "avg_stock": 223.255814,
+        "product_name": "MekongFit UE-01",
+        "category": "Streetwear",
+        "units": 3935.0,
+        "revenue": 24998806.04,
+        "margin": -904911.3625
+      },
+      {
+        "product_id": 2368,
+        "avg_stockout": 0.790323,
+        "avg_overstock": 0.83871,
+        "avg_days_supply": 661.356452,
+        "avg_sell_through": 0.142585,
+        "avg_fill_rate": 0.946781,
+        "avg_stock": 200.854839,
+        "product_name": "VietMotion UC-16",
+        "category": "Streetwear",
+        "units": 5098.0,
+        "revenue": 43002670.3,
+        "margin": 16318583.199426
+      },
+      {
+        "product_id": 2250,
+        "avg_stockout": 0.783784,
+        "avg_overstock": 0.837838,
+        "avg_days_supply": 1328.108108,
+        "avg_sell_through": 0.111235,
+        "avg_fill_rate": 0.958554,
+        "avg_stock": 170.864865,
+        "product_name": "VietMotion RP-47",
+        "category": "Outdoor",
+        "units": 2618.0,
+        "revenue": 3809085.59,
+        "margin": 1336502.104166
+      },
+      {
+        "product_id": 432,
+        "avg_stockout": 0.782609,
+        "avg_overstock": 0.717391,
+        "avg_days_supply": 1762.969565,
+        "avg_sell_through": 0.196567,
+        "avg_fill_rate": 0.940576,
+        "avg_stock": 282.826087,
+        "product_name": "SaigonFlex UM-37",
+        "category": "Streetwear",
+        "units": 7910.0,
+        "revenue": 81827863.21,
+        "margin": -1652244.085907
+      },
+      {
+        "product_id": 1962,
+        "avg_stockout": 0.781818,
+        "avg_overstock": 0.909091,
+        "avg_days_supply": 905.527273,
+        "avg_sell_through": 0.120844,
+        "avg_fill_rate": 0.96182,
+        "avg_stock": 119.490909,
+        "product_name": "UrbanVN RP-37",
+        "category": "Outdoor",
+        "units": 2691.0,
+        "revenue": 4504454.99,
+        "margin": -17869.487671
+      }
+    ],
+    "overstock_candidates": [
+      {
+        "product_id": 475,
+        "avg_stockout": 0.571429,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 6547.926984,
+        "avg_sell_through": 0.12244,
+        "avg_fill_rate": 0.972489,
+        "avg_stock": 885.47619,
+        "product_name": "SaigonFlex UM-80",
+        "category": "Streetwear",
+        "units": 22709.0,
+        "revenue": 267387485.24,
+        "margin": 39369572.417046
+      },
+      {
+        "product_id": 635,
+        "avg_stockout": 0.621212,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 4510.407576,
+        "avg_sell_through": 0.087835,
+        "avg_fill_rate": 0.970711,
+        "avg_stock": 817.136364,
+        "product_name": "SaigonFlex UC-00",
+        "category": "Streetwear",
+        "units": 14745.0,
+        "revenue": 148186195.57,
+        "margin": 12452123.172757
+      },
+      {
+        "product_id": 671,
+        "avg_stockout": 0.564103,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 4431.133333,
+        "avg_sell_through": 0.054867,
+        "avg_fill_rate": 0.973508,
+        "avg_stock": 492.948718,
+        "product_name": "SaigonFlex UC-36",
+        "category": "Streetwear",
+        "units": 3652.0,
+        "revenue": 37602166.44,
+        "margin": 8873840.232992
+      },
+      {
+        "product_id": 992,
+        "avg_stockout": 0.633333,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 3860.401111,
+        "avg_sell_through": 0.062056,
+        "avg_fill_rate": 0.968519,
+        "avg_stock": 579.666667,
+        "product_name": "HanoiStreet UC-55",
+        "category": "Streetwear",
+        "units": 9943.0,
+        "revenue": 31772483.6,
+        "margin": 6867339.637124
+      },
+      {
+        "product_id": 676,
+        "avg_stockout": 0.66055,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 3485.837615,
+        "avg_sell_through": 0.044724,
+        "avg_fill_rate": 0.96544,
+        "avg_stock": 631.366972,
+        "product_name": "SaigonFlex UC-41",
+        "category": "Streetwear",
+        "units": 10401.0,
+        "revenue": 94966367.26,
+        "margin": -678074.903085
+      },
+      {
+        "product_id": 910,
+        "avg_stockout": 0.641975,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 3147.139506,
+        "avg_sell_through": 0.043296,
+        "avg_fill_rate": 0.968314,
+        "avg_stock": 537.382716,
+        "product_name": "HanoiStreet UE-19",
+        "category": "Streetwear",
+        "units": 6325.0,
+        "revenue": 31202731.67,
+        "margin": 550650.661849
+      },
+      {
+        "product_id": 596,
+        "avg_stockout": 0.732673,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 3122.835644,
+        "avg_sell_through": 0.050658,
+        "avg_fill_rate": 0.961713,
+        "avg_stock": 506.861386,
+        "product_name": "SaigonFlex UC-61",
+        "category": "Streetwear",
+        "units": 8457.0,
+        "revenue": 74842655.41,
+        "margin": 25436356.833993
+      },
+      {
+        "product_id": 990,
+        "avg_stockout": 0.65,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 3055.534,
+        "avg_sell_through": 0.072067,
+        "avg_fill_rate": 0.968669,
+        "avg_stock": 372.76,
+        "product_name": "HanoiStreet UC-53",
+        "category": "Streetwear",
+        "units": 8074.0,
+        "revenue": 40792828.46,
+        "margin": 9343868.028644
+      },
+      {
+        "product_id": 396,
+        "avg_stockout": 0.637931,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 3006.887931,
+        "avg_sell_through": 0.107533,
+        "avg_fill_rate": 0.966088,
+        "avg_stock": 846.672414,
+        "product_name": "SaigonFlex UM-01",
+        "category": "Streetwear",
+        "units": 17339.0,
+        "revenue": 178201946.32,
+        "margin": 3233884.819222
+      },
+      {
+        "product_id": 739,
+        "avg_stockout": 0.571429,
+        "avg_overstock": 1.0,
+        "avg_days_supply": 2654.421429,
+        "avg_sell_through": 0.032529,
+        "avg_fill_rate": 0.973814,
+        "avg_stock": 138.464286,
+        "product_name": "HanoiStreet RP-27",
+        "category": "Outdoor",
+        "units": 452.0,
+        "revenue": 916032.56,
+        "margin": 85671.681031
+      }
+    ]
+  },
+  "web_traffic": {
+    "joined_days": 3652,
+    "spearman": {
+      "unique_visitors": 0.368668,
+      "sessions": 0.36839,
+      "page_views": 0.350601,
+      "bounce_rate": -0.015836,
+      "avg_session_duration_sec": -0.025403
+    },
+    "lead_lag": [
+      {
+        "lag_days": -14,
+        "spearman_sessions": 0.361869
+      },
+      {
+        "lag_days": -13,
+        "spearman_sessions": 0.361138
+      },
+      {
+        "lag_days": -12,
+        "spearman_sessions": 0.36228
+      },
+      {
+        "lag_days": -11,
+        "spearman_sessions": 0.363107
+      },
+      {
+        "lag_days": -10,
+        "spearman_sessions": 0.363974
+      },
+      {
+        "lag_days": -9,
+        "spearman_sessions": 0.36449
+      },
+      {
+        "lag_days": -8,
+        "spearman_sessions": 0.36318
+      },
+      {
+        "lag_days": -7,
+        "spearman_sessions": 0.364254
+      },
+      {
+        "lag_days": -6,
+        "spearman_sessions": 0.362913
+      },
+      {
+        "lag_days": -5,
+        "spearman_sessions": 0.360504
+      },
+      {
+        "lag_days": -4,
+        "spearman_sessions": 0.359806
+      },
+      {
+        "lag_days": -3,
+        "spearman_sessions": 0.359163
+      },
+      {
+        "lag_days": -2,
+        "spearman_sessions": 0.361475
+      },
+      {
+        "lag_days": -1,
+        "spearman_sessions": 0.363481
+      },
+      {
+        "lag_days": 0,
+        "spearman_sessions": 0.36839
+      },
+      {
+        "lag_days": 1,
+        "spearman_sessions": 0.373023
+      },
+      {
+        "lag_days": 2,
+        "spearman_sessions": 0.36955
+      },
+      {
+        "lag_days": 3,
+        "spearman_sessions": 0.368315
+      },
+      {
+        "lag_days": 4,
+        "spearman_sessions": 0.365636
+      },
+      {
+        "lag_days": 5,
+        "spearman_sessions": 0.363544
+      },
+      {
+        "lag_days": 6,
+        "spearman_sessions": 0.359305
+      },
+      {
+        "lag_days": 7,
+        "spearman_sessions": 0.359945
+      },
+      {
+        "lag_days": 8,
+        "spearman_sessions": 0.356516
+      },
+      {
+        "lag_days": 9,
+        "spearman_sessions": 0.354594
+      },
+      {
+        "lag_days": 10,
+        "spearman_sessions": 0.349327
+      },
+      {
+        "lag_days": 11,
+        "spearman_sessions": 0.346522
+      },
+      {
+        "lag_days": 12,
+        "spearman_sessions": 0.345941
+      },
+      {
+        "lag_days": 13,
+        "spearman_sessions": 0.342087
+      },
+      {
+        "lag_days": 14,
+        "spearman_sessions": 0.337277
+      }
+    ],
+    "best_lag_days": 1,
+    "best_lag_spearman": 0.3730232993505721,
+    "source": [
+      {
+        "traffic_source": "organic_search",
+        "sessions": 27196976,
+        "unique_visitors": 20625107,
+        "page_views": 117606452,
+        "session_share": 0.297389
+      },
+      {
+        "traffic_source": "paid_search",
+        "sessions": 19598271,
+        "unique_visitors": 14922386,
+        "page_views": 85079551,
+        "session_share": 0.2143
+      },
+      {
+        "traffic_source": "social_media",
+        "sessions": 15816226,
+        "unique_visitors": 12048065,
+        "page_views": 68072140,
+        "session_share": 0.172945
+      },
+      {
+        "traffic_source": "email_campaign",
+        "sessions": 12792670,
+        "unique_visitors": 9700462,
+        "page_views": 55477636,
+        "session_share": 0.139883
+      },
+      {
+        "traffic_source": "referral",
+        "sessions": 9476845,
+        "unique_visitors": 7220019,
+        "page_views": 41655659,
+        "session_share": 0.103626
+      },
+      {
+        "traffic_source": "direct",
+        "sessions": 6571549,
+        "unique_visitors": 4986650,
+        "page_views": 28771362,
+        "session_share": 0.071857
+      }
+    ]
+  }
+}

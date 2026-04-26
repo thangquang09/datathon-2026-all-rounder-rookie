@@ -1,0 +1,8 @@
+priority,decision_area,evidence,recommended_action,tables
+1,Kế hoạch nhu cầu,"Revenue 2019 giảm 38.6% YoY, số đơn giảm 40.1%; daily mean hậu 2019 thấp hơn 40.5% so với 2012-2018.",Lấy hậu 2019 làm baseline vận hành; không cho các năm đầu kéo kế hoạch tồn kho/ngân sách lên quá cao.,"sales, orders, order_items"
+2,Merchandising theo mùa,Tháng 5 cao hơn average day 53.4%; tháng 12 thấp hơn 41.1%; peak month khác nhau theo category.,Chuẩn bị mua hàng/content/stock từ tháng 3-6; giữ Outdoor allocation riêng cho tháng 12 và vùng West.,"sales, orders, order_items, products, geography"
+3,Quản trị promotion,Ngày có >50% đơn dùng promo có median revenue thấp hơn 13.3% so với ngày <10% promo.,"Dùng promo như intervention có đo uplift và margin guardrail, không chạy blanket như đòn bẩy mặc định.","orders, order_items, promotions, products"
+4,Retention và kênh bán,Top 20% khách tạo 60.6% revenue; 75.2% khách có đơn là repeat buyers.,Bảo vệ cohort giá trị cao bằng early access/personalized drops trước mùa peak.,"customers, orders, order_items, payments"
+5,Rò rỉ qua return,wrong_size chiếm 34.7% return quantity và 34.6% refund; return rate giữa category rất sát nhau.,Sửa size guidance và expectation trên product page ở cấp hệ thống trước khi nhắm vào một category.,"returns, reviews, shipments, products, order_items"
+6,Phân bổ tồn kho,Năm 2022 có stockout rate 66.6% và overstock rate 76.7% cùng lúc.,Reallocate ở cấp SKU: replenish SKU nhu cầu cao bị stockout và xử lý chronic overstock.,"inventory, products, order_items"
+7,Traffic và tín hiệu dự báo,Sessions chỉ tương quan 0.368 với revenue; lead/lag tốt nhất là 0.373 tại lag +1.,Dùng traffic như tín hiệu phụ; đo conversion/value theo source thay vì tối ưu volume thuần.,"web_traffic, sales"
