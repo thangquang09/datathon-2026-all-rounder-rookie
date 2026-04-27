@@ -49,6 +49,20 @@ pip-wheel-metadata/
 */.ipynb_checkpoints/
 profile_default/
 
+# LaTeX build artifacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.xdv
+*.synctex.gz
+*.build.log
+
+# HTML exports from notebooks
+*.html
+
+# PyCache in results
+__pycache__/
+
 # Large binary files
 *.pbix
 ipython_config.py
