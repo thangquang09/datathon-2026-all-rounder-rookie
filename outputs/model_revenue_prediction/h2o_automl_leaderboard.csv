@@ -1,0 +1,2 @@
+status
+"h2o skipped: failed to start local H2O server (Command '['/usr/bin/java', '-version']' returned non-zero exit status 1.)"

@@ -1,0 +1,28 @@
+priority,file,public_mae,description
+0,submission_lb_calibrated_sample.csv,696288.80559,"Current calibrated sample anchor; user-observed public MAE is 696,288.80559."
+10,submission_lbprobe_variance_g095.csv,,Daily volatility gamma=0.95 with target-year means preserved.
+11,submission_lbprobe_variance_g105.csv,,Daily volatility gamma=1.05 with target-year means preserved.
+20,submission_lbprobe_peak_damp097.csv,,Damp March-June peak months by 3% and preserve yearly means.
+21,submission_lbprobe_peak_boost103.csv,,Boost March-June peak months by 3% and preserve yearly means.
+22,submission_lbprobe_q4_boost106.csv,,Boost Q4 trough months by 6% and preserve yearly means.
+23,submission_lbprobe_q4_damp094.csv,,Damp Q4 trough months by 6% and preserve yearly means.
+30,submission_lbprobe_2024_trend_down10.csv,,2024 within-year trend -10%; preserves 2024 target means.
+31,submission_lbprobe_2024_trend_up10.csv,,2024 within-year trend +10%; preserves 2024 target means.
+40,submission_lbprobe_cogs_down010.csv,,COGS down 1.0%; isolates target-specific residual bias.
+41,submission_lbprobe_cogs_up010.csv,,COGS up 1.0%; isolates target-specific residual bias.
+42,submission_lbprobe_revenue_down010.csv,,Revenue down 1.0%; isolates target-specific residual bias.
+43,submission_lbprobe_revenue_up010.csv,,Revenue up 1.0%; isolates target-specific residual bias.
+44,submission_lbprobe_y2024_down010.csv,,Both targets in 2024 down 1%; isolates forecast-year residual bias.
+45,submission_lbprobe_y2024_up010.csv,,Both targets in 2024 up 1%; isolates forecast-year residual bias.
+50,submission_lbprobe_all_down005.csv,,All Revenue and COGS values down 0.5%; tests whether calibrated levels are slightly high.
+51,submission_lbprobe_all_up005.csv,,All Revenue and COGS values up 0.5%; tests whether calibrated levels are slightly low.
+70,submission_lbprobe_variance_g090.csv,,Daily volatility gamma=0.90 with target-year means preserved.
+71,submission_lbprobe_variance_g110.csv,,Daily volatility gamma=1.10 with target-year means preserved.
+72,submission_lbprobe_2024_trend_down18.csv,,2024 within-year trend -18%; preserves 2024 target means.
+73,submission_lbprobe_2024_trend_up18.csv,,2024 within-year trend +18%; preserves 2024 target means.
+80,submission_lbprobe_all_down015.csv,,All Revenue and COGS values down 1.5%; wider level probe around the LB anchor.
+81,submission_lbprobe_all_up015.csv,,All Revenue and COGS values up 1.5%; wider level probe around the LB anchor.
+82,submission_lbprobe_cogs_down020.csv,,COGS down 2.0%; isolates target-specific residual bias.
+83,submission_lbprobe_cogs_up020.csv,,COGS up 2.0%; isolates target-specific residual bias.
+84,submission_lbprobe_y2023_down010.csv,,Both targets in 2023 down 1%; isolates forecast-year residual bias.
+85,submission_lbprobe_y2023_up010.csv,,Both targets in 2023 up 1%; isolates forecast-year residual bias.

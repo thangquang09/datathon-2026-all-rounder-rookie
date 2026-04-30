@@ -1,0 +1,9 @@
+target,model,weight,cv_tuned_mae
+Revenue,sample_or_doy_shape,0.25,668789.4030988344
+Revenue,doy_weighted_hl2,0.25,668789.4030988344
+Revenue,quarter_yoy_specialist,0.3,668789.4030988344
+Revenue,lag365_smooth_w7,0.2,668789.4030988344
+COGS,sample_or_doy_shape,0.3,590022.7249670114
+COGS,doy_weighted_hl2,0.3,590022.7249670114
+COGS,quarter_yoy_specialist,0.15,590022.7249670114
+COGS,lag365_smooth_w7,0.25,590022.7249670114
