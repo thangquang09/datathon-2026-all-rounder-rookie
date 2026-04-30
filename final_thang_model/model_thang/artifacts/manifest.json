@@ -1,0 +1,207 @@
+{
+  "files": {
+    "submission_model_raw.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_raw.csv",
+    "submission_cv_ensemble_raw.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_cv_ensemble_raw.csv",
+    "submission_seasonal_raw.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_seasonal_raw.csv",
+    "submission_doy_raw.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_doy_raw.csv",
+    "submission_model_recent_mean.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_recent_mean.csv",
+    "submission_cv_ensemble_recent_mean.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_cv_ensemble_recent_mean.csv",
+    "submission_model_yoy_continuation.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_yoy_continuation.csv",
+    "submission_cv_ensemble_yoy_continuation.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_cv_ensemble_yoy_continuation.csv",
+    "submission_model_log_linear_2019.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_log_linear_2019.csv",
+    "submission_cv_ensemble_log_linear_2019.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_cv_ensemble_log_linear_2019.csv",
+    "submission_model_blend.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_blend.csv",
+    "submission_cv_ensemble_blend.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_cv_ensemble_blend.csv",
+    "submission_model_recovery_upper.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_recovery_upper.csv",
+    "submission_cv_ensemble_recovery_upper.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_cv_ensemble_recovery_upper.csv",
+    "submission_model_regime_recovery.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_regime_recovery.csv",
+    "submission_cv_ensemble_regime_recovery.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_cv_ensemble_regime_recovery.csv",
+    "submission_shape_ensemble_recovery_upper.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_shape_ensemble_recovery_upper.csv"
+  },
+  "train_levels": {
+    "recent_mean": {
+      "Revenue": {
+        "2023": 3014534.980039917,
+        "2024": 3014534.980039917
+      },
+      "COGS": {
+        "2023": 2637272.1013325285,
+        "2024": 2637272.1013325285
+      }
+    },
+    "yoy_continuation": {
+      "Revenue": {
+        "2023": 3594111.0123269768,
+        "2024": 4030725.4608218246
+      },
+      "COGS": {
+        "2023": 3031206.5198588697,
+        "2024": 3286585.125439899
+      }
+    },
+    "log_linear_2019": {
+      "Revenue": {
+        "2023": 3069784.5227511195,
+        "2024": 3093670.4229702954
+      },
+      "COGS": {
+        "2023": 2705105.086199979,
+        "2024": 2734500.3223809176
+      }
+    },
+    "blend": {
+      "Revenue": {
+        "2023": 3275344.194569094,
+        "2024": 3522630.2204308705
+      },
+      "COGS": {
+        "2023": 2814542.589669382,
+        "2024": 2961928.613386214
+      }
+    },
+    "recovery_upper": {
+      "Revenue": {
+        "2023": 3594111.0123269768,
+        "2024": 4030725.4608218246
+      },
+      "COGS": {
+        "2023": 3031206.5198588697,
+        "2024": 3286585.125439899
+      }
+    },
+    "regime_recovery": {
+      "Revenue": {
+        "2023": 4031796.826724414,
+        "2024": 4858802.333750198
+      },
+      "COGS": {
+        "2023": 3745048.377863612,
+        "2024": 4262890.211911261
+      }
+    }
+  },
+  "model_manifest": {
+    "Revenue": {
+      "n_features": 381,
+      "n_models": 9,
+      "models": [
+        {
+          "spec": "log_l1_leaves48",
+          "seed": 42,
+          "best_iter": 162,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l1_leaves48",
+          "seed": 123,
+          "best_iter": 257,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l1_leaves48",
+          "seed": 2024,
+          "best_iter": 206,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l2_leaves63",
+          "seed": 42,
+          "best_iter": 152,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l2_leaves63",
+          "seed": 123,
+          "best_iter": 517,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l2_leaves63",
+          "seed": 2024,
+          "best_iter": 356,
+          "transform": "log1p"
+        },
+        {
+          "spec": "raw_tweedie_leaves40",
+          "seed": 42,
+          "best_iter": 185,
+          "transform": "raw"
+        },
+        {
+          "spec": "raw_tweedie_leaves40",
+          "seed": 123,
+          "best_iter": 184,
+          "transform": "raw"
+        },
+        {
+          "spec": "raw_tweedie_leaves40",
+          "seed": 2024,
+          "best_iter": 197,
+          "transform": "raw"
+        }
+      ]
+    },
+    "COGS": {
+      "n_features": 381,
+      "n_models": 9,
+      "models": [
+        {
+          "spec": "log_l1_leaves48",
+          "seed": 42,
+          "best_iter": 538,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l1_leaves48",
+          "seed": 123,
+          "best_iter": 382,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l1_leaves48",
+          "seed": 2024,
+          "best_iter": 344,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l2_leaves63",
+          "seed": 42,
+          "best_iter": 124,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l2_leaves63",
+          "seed": 123,
+          "best_iter": 188,
+          "transform": "log1p"
+        },
+        {
+          "spec": "log_l2_leaves63",
+          "seed": 2024,
+          "best_iter": 145,
+          "transform": "log1p"
+        },
+        {
+          "spec": "raw_tweedie_leaves40",
+          "seed": 42,
+          "best_iter": 188,
+          "transform": "raw"
+        },
+        {
+          "spec": "raw_tweedie_leaves40",
+          "seed": 123,
+          "best_iter": 255,
+          "transform": "raw"
+        },
+        {
+          "spec": "raw_tweedie_leaves40",
+          "seed": 2024,
+          "best_iter": 189,
+          "transform": "raw"
+        }
+      ]
+    }
+  },
+  "recommended_first_submit": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_cv_ensemble_regime_recovery.csv",
+  "recommended_second_submit": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_regime_recovery.csv"
+}

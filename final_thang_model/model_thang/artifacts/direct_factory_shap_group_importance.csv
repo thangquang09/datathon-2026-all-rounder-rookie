@@ -1,0 +1,15 @@
+target,group,mean_abs_shap
+COGS,calendar_seasonality,0.6092753881736651
+COGS,target_lag,0.16376364756609915
+COGS,holiday_event,0.09923549607005165
+COGS,regime_level,0.03153606450072916
+COGS,anchor_level,0.013378498720739986
+COGS,horizon,0.0017966588371294502
+COGS,other,9.978286314084717e-05
+Revenue,calendar_seasonality,0.5776302497107226
+Revenue,target_lag,0.22413616875962702
+Revenue,holiday_event,0.10094492785080351
+Revenue,regime_level,0.022215272701606562
+Revenue,anchor_level,0.014590731568483548
+Revenue,horizon,0.0014827285272256514
+Revenue,other,0.00023091564944995158

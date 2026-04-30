@@ -1,0 +1,211 @@
+{
+  "cv_summary": [
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2020-06-30",
+      "model": "lgb",
+      "mae": 528580.7853251324,
+      "rmse": 800948.2611945024,
+      "r2": 0.7345378104840231
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2020-06-30",
+      "model": "ridge",
+      "mae": 2479777.207244617,
+      "rmse": 2876757.7600929732,
+      "r2": -2.424524935732086
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2020-06-30",
+      "model": "doy_prior",
+      "mae": 1517741.7917837591,
+      "rmse": 1833965.4183280193,
+      "r2": -0.3917974319340751
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2020-12-31",
+      "model": "lgb",
+      "mae": 601202.4851572997,
+      "rmse": 861855.4936129497,
+      "r2": 0.7611747347764695
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2020-12-31",
+      "model": "ridge",
+      "mae": 2849043.9833615376,
+      "rmse": 3274444.742320363,
+      "r2": -2.4473604279387793
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2020-12-31",
+      "model": "doy_prior",
+      "mae": 1305268.0981067517,
+      "rmse": 1684277.8401029208,
+      "r2": 0.08790761538319014
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2021-07-01",
+      "model": "lgb",
+      "mae": 441182.1067605597,
+      "rmse": 664637.8063052263,
+      "r2": 0.8168454760578832
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2021-07-01",
+      "model": "ridge",
+      "mae": 677452.7389776183,
+      "rmse": 961441.6876551145,
+      "r2": 0.616740026343152
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "2021-07-01",
+      "model": "doy_prior",
+      "mae": 899249.6624589417,
+      "rmse": 1195172.8106584377,
+      "r2": 0.40774467144543014
+    },
+    {
+      "target": "Revenue",
+      "fold_cutoff": "all_oof",
+      "model": "weighted_direct",
+      "mae": 503011.7523889093,
+      "rmse": 733825.3933894587,
+      "r2": 0.7993592643586229
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2020-06-30",
+      "model": "lgb",
+      "mae": 435556.5282528743,
+      "rmse": 650610.7006534069,
+      "r2": 0.766091442370694
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2020-06-30",
+      "model": "ridge",
+      "mae": 1994446.3549318693,
+      "rmse": 2313638.6971052187,
+      "r2": -1.9579769552684074
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2020-06-30",
+      "model": "doy_prior",
+      "mae": 1290189.6079379565,
+      "rmse": 1557013.494447433,
+      "r2": -0.3396410910805121
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2020-12-31",
+      "model": "lgb",
+      "mae": 535902.0699803861,
+      "rmse": 761583.2384794351,
+      "r2": 0.7567603311364732
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2020-12-31",
+      "model": "ridge",
+      "mae": 2262263.0895203752,
+      "rmse": 2610749.2937797317,
+      "r2": -1.8584459692234057
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2020-12-31",
+      "model": "doy_prior",
+      "mae": 1027204.7305565692,
+      "rmse": 1338314.319767119,
+      "r2": 0.248868632089858
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2021-07-01",
+      "model": "lgb",
+      "mae": 386234.8723599252,
+      "rmse": 566306.6310470738,
+      "r2": 0.8284570712875039
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2021-07-01",
+      "model": "ridge",
+      "mae": 544512.787171059,
+      "rmse": 744370.1049934302,
+      "r2": 0.7036210382330284
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "2021-07-01",
+      "model": "doy_prior",
+      "mae": 756748.3719206204,
+      "rmse": 1009937.4557186606,
+      "r2": 0.45441994526100493
+    },
+    {
+      "target": "COGS",
+      "fold_cutoff": "all_oof",
+      "model": "weighted_direct",
+      "mae": 441594.53028025513,
+      "rmse": 633896.7034434204,
+      "r2": 0.8038031180833064
+    }
+  ],
+  "weights": {
+    "Revenue": {
+      "lgb": 0.9,
+      "ridge": 0.0,
+      "doy_prior": 0.09999999999999998
+    },
+    "COGS": {
+      "lgb": 0.9,
+      "ridge": 0.0,
+      "doy_prior": 0.09999999999999998
+    }
+  },
+  "levels": {
+    "Revenue": {
+      "2023": 4031796.826724414,
+      "2024": 4858802.333750198
+    },
+    "COGS": {
+      "2023": 3745048.377863612,
+      "2024": 4262890.211911261
+    }
+  },
+  "files": {
+    "direct_raw": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_direct_factory_raw.csv",
+    "direct_regime": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_direct_factory_regime_recovery.csv",
+    "component_debug": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/direct_factory_component_debug.csv",
+    "m5_direct_95_05": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_m5_direct_blend_95_05.csv",
+    "m5_direct_90_10": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_m5_direct_blend_90_10.csv",
+    "m5_direct_85_15": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_m5_direct_blend_85_15.csv",
+    "m5_direct_80_20": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_m5_direct_blend_80_20.csv",
+    "m5_direct_75_25": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_m5_direct_blend_75_25.csv",
+    "m5_direct_70_30": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_m5_direct_blend_70_30.csv",
+    "cv_metrics": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/direct_factory_cv_metrics.csv",
+    "feature_importance": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/direct_factory_feature_importance.csv",
+    "shap_importance": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/direct_factory_shap_importance.csv",
+    "feature_group_importance": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/direct_factory_feature_group_importance.csv"
+  },
+  "holiday_source": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/docs/vietnam_holiday_calendar_2012_2024.csv",
+  "recommended_low_risk_submit": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_m5_direct_blend_85_15.csv",
+  "recommended_next_probe": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_m5_direct_blend_80_20.csv",
+  "recommended_direct_submit": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_direct_factory_regime_recovery.csv",
+  "leakage_policy": [
+    "no sample_submission target values read",
+    "future operational aggregates are not used",
+    "holiday features come from provided docs/vietnam_holiday_calendar_2012_2024.csv",
+    "direct rows use only information known at each historical cutoff"
+  ]
+}

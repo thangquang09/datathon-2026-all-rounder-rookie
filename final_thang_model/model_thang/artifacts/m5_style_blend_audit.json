@@ -1,0 +1,223 @@
+{
+  "levels": {
+    "Revenue": {
+      "2023": 4031796.826724414,
+      "2024": 4858802.333750198
+    },
+    "COGS": {
+      "2023": 3745048.377863612,
+      "2024": 4262890.211911261
+    }
+  },
+  "components": {
+    "v1": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/legacy_v1_regime_recovery.csv",
+    "v2": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/legacy_v2_regime_recovery.csv",
+    "v3": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/legacy_v3_regime_recovery.csv",
+    "v4": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/legacy_v4_regime_recovery.csv",
+    "standalone": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_model_regime_recovery.csv",
+    "shape": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_shape_ensemble_recovery_upper_regime_recovery.csv"
+  },
+  "optional_components": {
+    "v5_huber": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/outputs/final_v5/model_v5_raw.csv"
+  },
+  "available_components": [
+    "shape",
+    "standalone",
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+  ],
+  "blends": {
+    "m5blend_50_30_05_15.csv": {
+      "v1": 0.5,
+      "v2": 0.3,
+      "v3": 0.05,
+      "v4": 0.15
+    },
+    "m5blend_45_30_05_15_05.csv": {
+      "v1": 0.45,
+      "v2": 0.3,
+      "v3": 0.05,
+      "v4": 0.15,
+      "standalone": 0.05
+    },
+    "m5blend_50_25_00_15_10.csv": {
+      "v1": 0.5,
+      "v2": 0.25,
+      "v3": 0.0,
+      "v4": 0.15,
+      "shape": 0.1
+    }
+  },
+  "files": {
+    "m5blend_50_30_05_15.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/m5blend_50_30_05_15.csv",
+    "m5blend_45_30_05_15_05.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/m5blend_45_30_05_15_05.csv",
+    "m5blend_50_25_00_15_10.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/m5blend_50_25_00_15_10.csv",
+    "m5b50300515.csv": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/m5b50300515.csv"
+  },
+  "recommended_first_submit": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/m5b50300515.csv",
+  "leakage_policy": [
+    "does not read sample_submission.csv",
+    "all component files were generated from train CSVs only",
+    "raw optional components are normalised using sales.csv train-derived regime_recovery levels"
+  ],
+  "component_summary": [
+    {
+      "component": "v1",
+      "Revenue_mean": 4307968.373649634,
+      "Revenue_2023_mean": 4031796.826410959,
+      "Revenue_2024_mean": 4858802.333989071,
+      "COGS_mean": 3917977.311569343,
+      "COGS_2023_mean": 3745048.377863014,
+      "COGS_2024_mean": 4262890.212131148
+    },
+    {
+      "component": "v2",
+      "Revenue_mean": 4307968.37399635,
+      "Revenue_2023_mean": 4031796.826876712,
+      "Revenue_2024_mean": 4858802.33409836,
+      "COGS_mean": 3917977.3114233576,
+      "COGS_2023_mean": 3745048.3778082193,
+      "COGS_2024_mean": 4262890.211803279
+    },
+    {
+      "component": "v3",
+      "Revenue_mean": 4307968.373686131,
+      "Revenue_2023_mean": 4031796.8266027393,
+      "Revenue_2024_mean": 4858802.333715847,
+      "COGS_mean": 3917977.311532846,
+      "COGS_2023_mean": 3745048.377863014,
+      "COGS_2024_mean": 4262890.2120218575
+    },
+    {
+      "component": "v4",
+      "Revenue_mean": 4307968.373886862,
+      "Revenue_2023_mean": 4031796.826739726,
+      "Revenue_2024_mean": 4858802.334043716,
+      "COGS_mean": 3917977.311459854,
+      "COGS_2023_mean": 3745048.3779452057,
+      "COGS_2024_mean": 4262890.211639345
+    },
+    {
+      "component": "standalone",
+      "Revenue_mean": 4307968.373795621,
+      "Revenue_2023_mean": 4031796.826712329,
+      "Revenue_2024_mean": 4858802.333825137,
+      "COGS_mean": 3917977.311478102,
+      "COGS_2023_mean": 3745048.377863014,
+      "COGS_2024_mean": 4262890.211857923
+    },
+    {
+      "component": "shape",
+      "Revenue_mean": 3739914.7424270073,
+      "Revenue_2023_mean": 3594111.012356165,
+      "Revenue_2024_mean": 4030725.460874317,
+      "COGS_mean": 3116488.061478102,
+      "COGS_2023_mean": 3031206.520027397,
+      "COGS_2024_mean": 3286585.125027323
+    }
+  ],
+  "component_correlations": {
+    "Revenue": {
+      "v1": {
+        "v1": 1.0,
+        "v2": 0.96999,
+        "v3": 0.96239,
+        "v4": 0.97471,
+        "standalone": 0.97061,
+        "shape": 0.931
+      },
+      "v2": {
+        "v1": 0.96999,
+        "v2": 1.0,
+        "v3": 0.98344,
+        "v4": 0.99485,
+        "standalone": 0.98293,
+        "shape": 0.94277
+      },
+      "v3": {
+        "v1": 0.96239,
+        "v2": 0.98344,
+        "v3": 1.0,
+        "v4": 0.98299,
+        "standalone": 0.98373,
+        "shape": 0.95263
+      },
+      "v4": {
+        "v1": 0.97471,
+        "v2": 0.99485,
+        "v3": 0.98299,
+        "v4": 1.0,
+        "standalone": 0.98725,
+        "shape": 0.94551
+      },
+      "standalone": {
+        "v1": 0.97061,
+        "v2": 0.98293,
+        "v3": 0.98373,
+        "v4": 0.98725,
+        "standalone": 1.0,
+        "shape": 0.95537
+      },
+      "shape": {
+        "v1": 0.931,
+        "v2": 0.94277,
+        "v3": 0.95263,
+        "v4": 0.94551,
+        "standalone": 0.95537,
+        "shape": 1.0
+      }
+    },
+    "COGS": {
+      "v1": {
+        "v1": 1.0,
+        "v2": 0.9609,
+        "v3": 0.95991,
+        "v4": 0.9677,
+        "standalone": 0.96722,
+        "shape": 0.93138
+      },
+      "v2": {
+        "v1": 0.9609,
+        "v2": 1.0,
+        "v3": 0.99338,
+        "v4": 0.99638,
+        "standalone": 0.98358,
+        "shape": 0.95793
+      },
+      "v3": {
+        "v1": 0.95991,
+        "v2": 0.99338,
+        "v3": 1.0,
+        "v4": 0.99192,
+        "standalone": 0.98366,
+        "shape": 0.95048
+      },
+      "v4": {
+        "v1": 0.9677,
+        "v2": 0.99638,
+        "v3": 0.99192,
+        "v4": 1.0,
+        "standalone": 0.989,
+        "shape": 0.95725
+      },
+      "standalone": {
+        "v1": 0.96722,
+        "v2": 0.98358,
+        "v3": 0.98366,
+        "v4": 0.989,
+        "standalone": 1.0,
+        "shape": 0.95501
+      },
+      "shape": {
+        "v1": 0.93138,
+        "v2": 0.95793,
+        "v3": 0.95048,
+        "v4": 0.95725,
+        "standalone": 0.95501,
+        "shape": 1.0
+      }
+    }
+  }
+}

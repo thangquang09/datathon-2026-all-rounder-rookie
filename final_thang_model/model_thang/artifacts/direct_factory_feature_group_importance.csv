@@ -1,0 +1,15 @@
+target,group,gain
+COGS,calendar_seasonality,596431.3147702217
+COGS,target_lag,237498.2780482769
+COGS,holiday_event,100587.82220649719
+COGS,regime_level,13944.492204904556
+COGS,anchor_level,13158.502299785614
+COGS,horizon,5762.265302658081
+COGS,other,396.58685064315796
+Revenue,calendar_seasonality,578926.04474473
+Revenue,target_lag,266504.5002298355
+Revenue,holiday_event,112893.12823987007
+Revenue,anchor_level,12992.543830156326
+Revenue,regime_level,11461.010399341583
+Revenue,horizon,5562.415288686752
+Revenue,other,387.470498085022

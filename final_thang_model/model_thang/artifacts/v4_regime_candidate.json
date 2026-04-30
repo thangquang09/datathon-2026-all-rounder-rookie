@@ -1,0 +1,29 @@
+{
+  "raw_file": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_v4_raw.csv",
+  "regime_recovery_file": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_v4_regime_recovery.csv",
+  "raw_means": {
+    "Revenue": {
+      "2023": 2975862.5577189,
+      "2024": 3460524.629012956
+    },
+    "COGS": {
+      "2023": 2593508.295796244,
+      "2024": 2913846.9571861844
+    }
+  },
+  "levels": {
+    "Revenue": {
+      "2023": 4031796.826724414,
+      "2024": 4858802.333750198
+    },
+    "COGS": {
+      "2023": 3745048.377863612,
+      "2024": 4262890.211911261
+    }
+  },
+  "leakage_policy": [
+    "src.final_model_v4 builds features from train CSVs only",
+    "this wrapper does not read sample_submission",
+    "yearly calibration uses sales.csv 2014-2018 and 2022 recovery only"
+  ]
+}
