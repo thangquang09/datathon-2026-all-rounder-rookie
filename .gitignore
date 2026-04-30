@@ -72,6 +72,8 @@ ipython_config.py
 artifacts/
 checkpoints/
 models/
+!src/models/
+!src/models/**
 outputs/
 predictions/
 runs/
