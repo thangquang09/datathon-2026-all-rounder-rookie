@@ -15,6 +15,7 @@ vinuni_hackathon/
 - `reproduce_submission.py`: script kiểm tra/copy final candidate hiện có ra `submission.csv` khi không cần train lại.
 - `submission.csv`: file submit cuối, sinh từ candidate local `submission_m5_lgb_direct_blend_80_20.csv`.
 - `MODEL_REPORT.md`: báo cáo kỹ thuật tiếng Việt về feature engineering, model, validation, leakage guard và explainability.
+- `CV_DATA_SPLIT.md`: mô tả cách chia train/validation, walk-forward CV, direct pseudo-cutoff CV và artifact mean/std.
 - `model_thang/`: các script pipeline đã được copy vào package để không phụ thuộc folder ngoài.
 - `src/`: module feature/model local dùng bởi pipeline.
 - `docs/`: CSV calendar deterministic sinh từ dương lịch và audit feature holiday dùng bởi model explainable.
