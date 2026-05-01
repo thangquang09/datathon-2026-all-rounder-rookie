@@ -1,110 +1,286 @@
-# Overview
+# Datathon 2026 — The Gridbreakers
 
-## DATATHON 2026 — The Gridbreakers
+Repository này là workspace của team **All-Rounder Rookie** cho VinUni Datathon 2026. Mục tiêu của project là biến dữ liệu vận hành của một fashion e-commerce platform thành hai nhóm deliverables chính: phân tích kinh doanh có thể hành động được và mô hình dự báo `Revenue`/`COGS` theo ngày.
 
-### Breaking Business Boundaries
+## 1. Giới Thiệu Contest
 
-Được tổ chức bởi **VinTelligence — VinUniversity Data Science & AI Club**
+Datathon 2026 — The Gridbreakers được tổ chức bởi **VinTelligence — VinUniversity Data Science & AI Club**. Trong bối cảnh bài toán, team đóng vai trò data science team của một doanh nghiệp thương mại điện tử thời trang Việt Nam, cần phân tích dữ liệu bán hàng, khách hàng, sản phẩm, tồn kho, khuyến mãi, logistics và traffic để đề xuất chiến lược kinh doanh.
 
-Chào mừng đến với **Datathon 2026 — The Gridbreakers**, cuộc thi Khoa học Dữ liệu đầu tiên tại VinUniversity!
+Cuộc thi gồm ba phần:
 
-Trong cuộc thi này, bạn sẽ đóng vai trò nhà khoa học dữ liệu tại một công ty thương mại điện tử thời trang Việt Nam. Nhiệm vụ của bạn là khai thác bộ dữ liệu thực tế mô phỏng toàn bộ hoạt động kinh doanh — từ đơn hàng, tồn kho, khuyến mãi đến lưu lượng website — để biến dữ liệu thành giải pháp kinh doanh.
+| Phần | Nội dung                                                   | Điểm |
+| ----- | ----------------------------------------------------------- | -----: |
+| 1     | Multiple Choice Questions                                   |     20 |
+| 2     | Exploratory Data Analysis, visualization, business insights |     60 |
+| 3     | Revenue/COGS forecasting trên Kaggle                       |     20 |
 
-Cuộc thi gồm 3 phần:
+Repository này tập trung vào phần 2 và phần 3: EDA, customer segmentation, LTV/profit optimization, product/inventory/churn analysis, và forecasting pipeline.
 
-| Phần | Nội dung | Điểm |
-|------|----------|------|
-| 1 | Câu hỏi Trắc nghiệm (MCQ) | 20 điểm |
-| 2 | Trực quan hoá & Phân tích Dữ liệu (EDA) | 60 điểm |
-| 3 | Mô hình Dự báo Doanh thu (phần này — Kaggle) | 20 điểm |
+## 2. Bài Toán Và Data
 
-Phần thi trên Kaggle tập trung vào **Phần 3: Dự báo cột `Revenue` hàng ngày** cho giai đoạn `01/01/2023 – 01/07/2024`.
+### Forecasting Target
 
-> 💡 **Lưu ý quan trọng:** Kết quả Kaggle chỉ là một phần trong tổng điểm. Bài nộp đầy đủ bao gồm báo cáo phân tích EDA và code pipeline — hãy xem hướng dẫn nộp bài đầy đủ trong phần Rules.
+Mô hình dự báo hai target theo ngày:
 
----
+| Target      | Ý nghĩa                              |
+| ----------- | -------------------------------------- |
+| `Revenue` | Doanh thu ngày cần dự báo          |
+| `COGS`    | Cost of Goods Sold ngày cần dự báo |
 
-# Description
+Forecast horizon là `2023-01-01` đến `2024-07-01`, tổng cộng 548 ngày. Submission cuối cùng nằm tại:
 
-## Bối cảnh kinh doanh
+```text
+data/processed/sales_forecast_submission/submission.csv
+```
 
-Bạn là nhà khoa học dữ liệu tại một công ty thương mại điện tử thời trang Việt Nam. Doanh nghiệp cần dự báo doanh thu chính xác ở mức chi tiết theo ngày để:
+### Raw Data
 
-- Tối ưu hoá phân bổ tồn kho
-- Lập kế hoạch khuyến mãi
-- Quản lý logistics trên toàn quốc
+Raw contest data nằm trực tiếp trong `data/`:
 
-Bộ dữ liệu mô phỏng hoạt động của doanh nghiệp từ `04/07/2012` đến `31/12/2022` (tập train), bao gồm **15 file CSV** được chia thành 4 lớp:
+| Nhóm        | Files                                                                                                      |
+| ------------ | ---------------------------------------------------------------------------------------------------------- |
+| Sales target | `sales.csv`, `sample_submission.csv`                                                                   |
+| Transactions | `orders.csv`, `order_items.csv`, `payments.csv`, `shipments.csv`, `returns.csv`, `reviews.csv` |
+| Master data  | `customers.csv`, `products.csv`, `promotions.csv`, `geography.csv`                                 |
+| Operations   | `inventory.csv`, `web_traffic.csv`                                                                     |
 
-- **Master:** sản phẩm, khách hàng, khuyến mãi, địa lý
-- **Transaction:** đơn hàng, chi tiết đơn, thanh toán, vận chuyển, trả hàng, đánh giá
-- **Analytical:** doanh thu theo ngày
-- **Operational:** tồn kho hàng tháng, lưu lượng website hàng ngày
+Một số processed outputs phục vụ EDA/report hiện nằm trong `data/truong.le/`, `data/thang.quang/` và `data/processed/`. Các output quan trọng nhất nên được tái tạo từ notebooks/scripts thay vì chỉnh tay.
 
-## Định nghĩa bài toán
+## 3. Project Tree Và Vai Trò
 
-Dự báo cột **Revenue** (doanh thu thuần hàng ngày) cho giai đoạn `01/01/2023 – 01/07/2024`.
+Team thống nhất chỉ dùng bốn core folders: `data`, `docs`, `notebooks`, `src`. Không tạo project con hoặc folder kết quả rải rác ở root.
 
-Mỗi dòng trong tập test là một bộ `(Date, Revenue, COGS)` duy nhất.
+```text
+.
+├── data/
+│   ├── *.csv
+│   ├── processed/
+│   │   └── sales_forecast_submission/
+│   ├── thang.quang/
+│   └── truong.le/
+│
+├── docs/
+│   ├── CUSTOMER_SEGMENTATION_REPORT.md
+│   ├── MODEL_REPORT.md
+│   ├── MODEL_DOCUMENTATION.md
+│   ├── PROJECT_STRUCTURE_AND_PUSH_RULES.md
+│   ├── agent_rules/
+│   └── images/
+│
+├── notebooks/
+│   ├── eda_segmentation.ipynb
+│   ├── eda_product_insights.ipynb
+│   ├── model_baseline_seasonal.ipynb
+│   ├── model_lgbm_forecasting.ipynb
+│   └── model_reproduce_best_kaggle_solution.ipynb
+│
+└── src/
+    ├── eda/
+    ├── features/
+    ├── models/
+    │   └── sales_forecasting/
+    ├── utils/
+    └── visualization/
+```
 
-| Split | File | Khoảng thời gian |
-|-------|------|------------------|
-| Train | `sales.csv` | 04/07/2012 – 31/12/2022 |
-| Test | `sales_test.csv` | 01/01/2023 – 01/07/2024 |
+### Vai Trò Các Folder
 
-> Tập test không được công bố. Cấu trúc file test giống với `sample_submission.csv`.
+| Folder                 | Vai trò                                                              |
+| ---------------------- | --------------------------------------------------------------------- |
+| `data/`              | Dữ liệu thô, bảng đã xử lý, model artifacts, submission cuối |
+| `docs/`              | Báo cáo, ghi chú audit, quy tắc, hình ảnh, tài liệu           |
+| `notebooks/`         | EDA/modeling notebooks dùng để phân tích và trình bày         |
+| `src/eda/`           | Hàm EDA/phân khúc khách hàng tái sử dụng được              |
+| `src/features/`      | Feature engineering dùng lại cho modeling                           |
+| `src/models/`        | Huấn luyện model, inference, blending, forecasting pipeline         |
+| `src/utils/`         | Tiện ích dùng chung, ví dụ lịch Việt Nam                       |
+| `src/visualization/` | Scripts tạo hình ảnh báo cáo và biểu đồ chẩn đoán model   |
 
----
+Chi tiết rule đặt file và push code nằm ở:
 
-# Evaluation
+```text
+docs/PROJECT_STRUCTURE_AND_PUSH_RULES.md
+```
 
-## Chỉ số Đánh giá
+## 4. Main EDA Story
 
-Bài nộp được đánh giá bằng **ba chỉ số đồng thời**:
+Luận điểm chính của EDA là: **doanh nghiệp không chỉ cần tăng revenue, mà cần giảm profit leakage và phát triển profitable loyalty**.
 
-### Mean Absolute Error (MAE)
+### Customer Segmentation, LTV & Profit Optimization
 
-$$
-\text{MAE} = \frac{1}{n} \sum_{i=1}^{n} |F_i - A_i|
-$$
+Phân tích customer segmentation dùng `Customer Golden Table`, profit-based RFM segmentation và objective score. Segment cuối cùng gồm 6 nhóm: `Champions`, `Loyal`, `Potential`, `Need Attention`, `At Risk`, `Lost`.
 
-Đo độ lệch tuyệt đối trung bình giữa giá trị dự báo và giá trị thực. **Càng thấp càng tốt.**
+Các insight chính:
 
-### Root Mean Squared Error (RMSE)
+| Insight                               |                                 Evidence |
+| ------------------------------------- | ---------------------------------------: |
+| Tổng customers có realized purchase |                                   89,988 |
+| Tổng revenue                         |                               16.24B VND |
+| Tổng profit                          |                                2.24B VND |
+| Top 20% customers đóng góp profit  |                                   66.49% |
+| Customers có profit âm              | 9,722 customers, tương đương 10.80% |
+| Tổng profit âm                      |                               -61.7M VND |
+| XGBoost early loyalty AUC             |                                    0.731 |
 
-$$
-\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (F_i - A_i)^2}
-$$
+Hàm ý kinh doanh:
 
-Phạt nặng hơn các sai số lớn so với MAE. **Càng thấp càng tốt.**
+- `Champions` tạo phần lớn profit nên cần loyalty benefits, early access, personalized service, không nên lạm dụng deep discount.
+- `Potential` cần nurture để tăng frequency nhưng phải có margin guardrail.
+- `At Risk` và `Lost` nên dùng low-cost automation hoặc win-back có điều kiện, tránh đốt ngân sách vào nhóm có LTV thấp.
+- Promotion cần được quản trị theo `incremental profit`, không chỉ theo conversion rate.
 
-### R² (Coefficient of Determination)
+Report chính:
 
-$$
-R^2 = 1 - \frac{\sum_{i=1}^{n} (A_i - F_i)^2}{\sum_{i=1}^{n} (A_i - \bar{A})^2}
-$$
+```text
+docs/CUSTOMER_SEGMENTATION_REPORT.md
+notebooks/eda_segmentation.ipynb
+```
 
-Tỷ lệ phương sai được giải thích bởi mô hình. **Càng cao càng tốt** (lý tưởng gần 1).
+### Product, Inventory, UX, Churn Analysis
 
-Trong đó: $F_i$ = giá trị dự báo, $A_i$ = giá trị thực, $\bar{A}$ = trung bình giá trị thực.
+Các phân tích bổ trợ tập trung vào product mix, category profit, return/refund reason, inventory pressure, co-purchase behavior và UX friction. Một kết luận xuyên suốt là product/category performance không nên đọc bằng volume đơn thuần; cần kết hợp margin, return/refund, promotion dependency và stock/inventory signal.
 
----
+Tài liệu liên quan:
 
-## Điểm trên Kaggle (Phần 3 — 20 điểm tổng)
+```text
+docs/PRODUCT_INSIGHTS_REPORT.md
+docs/PRODUCT_INSIGHTS_AUDIT.md
+docs/ECOMMERCE_PERFORMANCE_ANALYSIS_REPORT.md
+docs/ECOMMERCE_EDA_INSIGHT_REPORT_PART_2.md
+notebooks/eda_product_insights.ipynb
+```
 
-| Thành phần | Mô tả | Điểm tối đa |
-|------------|-------|-------------|
-| Hiệu suất mô hình | Xếp hạng leaderboard dựa trên MAE, RMSE, R² | 12 điểm |
-| Báo cáo kỹ thuật | Pipeline, cross-validation, SHAP/feature importance | 8 điểm |
+## 5. Forecasting Pipeline
 
-| Mức điểm | Mô tả |
-|----------|-------|
-| 10–12 điểm | Top leaderboard; MAE và RMSE thấp, R² cao |
-| 5–9 điểm | Hiệu suất trung bình, mô hình hoạt động nhưng chưa tối ưu |
-| 3–4 điểm | Bài nộp hợp lệ nhưng hiệu suất thấp |
+Forecasting pipeline được thiết kế theo hướng leakage-safe. Tại mỗi ngày forecast, model chỉ được dùng thông tin đã biết trước ngày đó hoặc deterministic calendar features.
 
----
+### Model Architecture
 
-# Định dạng File Nộp
+Pipeline cuối cùng kết hợp hai hướng dự báo:
 
-Nộp file `submission.csv` với cấu trúc các dòng **phải giữ đúng thứ tự** như `sample_submission.csv`, không được sắp xếp lại hoặc xáo trộn.
+```text
+final = 80% M5-style seasonal/regime blend + 20% direct LightGBM regime model
+```
+
+| Component                 | Vai trò                                                       |
+| ------------------------- | -------------------------------------------------------------- |
+| Seasonal/recursive models | Giữ seasonal shape, yearly memory và level ổn định        |
+| Direct LightGBM           | Học trực tiếp horizon dài 548 ngày, giảm recursive drift |
+| DoY prior                 | Neo forecast vào seasonal pattern lịch sử                   |
+| Ensemble/blending         | Giảm model-specific bias và variance                         |
+
+### Kết Quả Validation
+
+CV đệ quy:
+
+| Target  | Model đệ quy tốt nhất |     MAE |    RMSE |    R2 |
+| ------- | ------------------------- | ------: | ------: | ----: |
+| Revenue | CV weighted ensemble      | 631,776 | 879,062 | 0.680 |
+| COGS    | CV weighted ensemble      | 547,400 | 758,884 | 0.688 |
+
+CV direct model:
+
+| Target  | Model           | MAE trung bình | MAE độ lệch chuẩn | R2 trung bình |
+| ------- | --------------- | --------------: | --------------------: | -------------: |
+| Revenue | Direct LightGBM |         529,738 |                93,477 |          0.764 |
+| COGS    | Direct LightGBM |         452,324 |                81,482 |          0.785 |
+
+So sánh với baseline:
+
+| Target  | Model baseline tốt nhất |     MAE |    RMSE |    R2 |
+| ------- | ------------------------- | ------: | ------: | ----: |
+| Revenue | XGBoost                   | 576,792 | 821,306 | 0.721 |
+| COGS    | XGBoost                   | 487,975 | 683,595 | 0.747 |
+
+Điểm public Kaggle mới nhất đã ghi nhận:
+
+```text
+730,067.90380
+```
+
+Tài liệu model chính:
+
+```text
+docs/MODEL_REPORT.md
+docs/MODEL_DOCUMENTATION.md
+docs/MODEL_EXPLAINABILITY.md
+docs/CV_DATA_SPLIT.md
+notebooks/model_reproduce_best_kaggle_solution.ipynb
+```
+
+## 6. Tái Tạo Kết Quả
+
+### Môi Trường
+
+Project dùng `uv` và Python `>=3.13`.
+
+```bash
+uv sync
+```
+
+### Tái Tạo Submission Cuối Từ Artifacts Có Sẵn
+
+```bash
+uv run python -m src.models.sales_forecasting.scripts.reproduce_submission --overwrite
+```
+
+Lệnh này xác thực và sao chép:
+
+```text
+data/processed/sales_forecast_submission/artifacts/final_candidates/submission_m5_lgb_direct_blend_80_20.csv
+```
+
+vào:
+
+```text
+data/processed/sales_forecast_submission/submission.csv
+```
+
+### Chạy Toàn Bộ Forecasting Package
+
+Huấn luyện đầy đủ nặng hơn. Chỉ dùng khi cần tái tạo lại artifacts.
+
+```bash
+uv run python -m src.models.sales_forecasting.train_save_infer_blend --skip-visuals
+```
+
+Tạo hình ảnh trực quan cho model:
+
+```bash
+uv run python -m src.visualization.sales_forecast_feature_importance
+uv run python -m src.visualization.sales_forecast_pipeline_flowchart
+```
+
+## 7. Các Output Quan Trọng
+
+| Output                             | Đường dẫn                                                                             |
+| ---------------------------------- | ----------------------------------------------------------------------------------------- |
+| Submission cuối                   | `data/processed/sales_forecast_submission/submission.csv`                               |
+| Forecast artifacts                 | `data/processed/sales_forecast_submission/artifacts/`                                   |
+| SHAP/feature importance            | `data/processed/sales_forecast_submission/artifacts/direct_factory_shap_importance.csv` |
+| Customer golden table              | `data/truong.le/customer_golden_table.csv`                                              |
+| Bảng khách hàng có phân khúc | `data/truong.le/customer_golden_table_with_segments.csv`                                |
+| Hình ảnh báo cáo               | `docs/images/`                                                                          |
+
+## 8. Thành Viên
+
+Team **All-Rounder Rookie**:
+
+| Thành viên          | Vai trò chính                                                                               |
+| --------------------- | --------------------------------------------------------------------------------------------- |
+| Lê Phú Trường     | Trưởng nhóm, phân khúc khách hàng, tối ưu LTV/profit, báo cáo, cấu trúc codebase |
+| Lý Quang Thắng      | Dự báo Revenue/COGS, feature engineering, model ensemble, Kaggle submission                 |
+| Trần Lê Hữu Vinh   | Hỗ trợ EDA/phân tích sản phẩm và kinh doanh, phát triển model                        |
+| Lê Đặng Gia Khánh | Hỗ trợ EDA/modeling/báo cáo                                                               |
+
+## 9. Liên Kết Nhanh
+
+| Nhu cầu                               | Bắt đầu từ đây                                     |
+| -------------------------------------- | -------------------------------------------------------- |
+| Hiểu quy tắc project                 | `docs/PROJECT_STRUCTURE_AND_PUSH_RULES.md`             |
+| Đọc báo cáo phân khúc            | `docs/CUSTOMER_SEGMENTATION_REPORT.md`                 |
+| Đọc báo cáo model                  | `docs/MODEL_REPORT.md`                                 |
+| Tái tạo submission tốt nhất        | `notebooks/model_reproduce_best_kaggle_solution.ipynb` |
+| Làm việc với EDA phân khúc        | `notebooks/eda_segmentation.ipynb`                     |
+| Làm việc với phân tích sản phẩm | `notebooks/eda_product_insights.ipynb`                 |
+| Thí nghiệm model                     | `notebooks/model_lgbm_forecasting.ipynb`               |

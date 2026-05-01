@@ -101,7 +101,7 @@ docs/Customer Segmentation, LTV & Profit Optimization.md
 docs/PROJECT_STRUCTURE_AND_PUSH_RULES.md
 docs/EDA_SCORING_RUBRIC_NOTES.md
 docs/SALES_FORECASTING_MODEL_NOTES.md
-docs/assets/customer_segmentation_ltv/01_profit_lorenz_curve.png
+docs/images/01_profit_lorenz_curve.png
 ```
 
 Ví dụ không được chấp nhận:
@@ -118,7 +118,7 @@ docs/final_final.md
 docs/new.md
 ```
 
-Nếu Markdown dùng hình ảnh, hình ảnh phải nằm trong `docs/assets/<topic_name>/`. Không để ảnh rải ở root, trong notebook folder, hoặc trong folder `results_*`.
+Nếu Markdown dùng hình ảnh, hình ảnh phải nằm trong `docs/images/`. Không để ảnh rải ở root, trong notebook folder, hoặc trong folder `results_*`.
 
 Mọi report final hoặc near-final phải có source rõ ràng. Nếu file PDF/TEX được build từ Markdown hoặc script, phải chỉ ra script/notebook tạo ra nó.
 
@@ -300,8 +300,8 @@ Không push generated artifacts trừ khi chúng phục vụ report hoặc submi
 Được push:
 
 ```text
-docs/assets/<topic>/*.png
-docs/assets/<topic>/*.csv
+docs/images/*.png
+docs/<topic>/*.csv
 submission.csv nếu cần nộp hoặc audit
 final report PDF nếu đúng deliverable
 ```
@@ -417,7 +417,7 @@ Trước khi push, tự kiểm tra:
 - Có notebook trùng intent với notebook hiện có không?
 - Có output/debug/temp artifact bị push nhầm không?
 - Markdown có nằm trong docs không?
-- Plot/report assets có nằm trong docs/assets/<topic>/ không?
+- Plot/report images có nằm trong docs/images/ không?
 - Code tái sử dụng đã chuyển vào src chưa?
 - Commit message có đúng format không?
 - Có sửa nhầm file của người khác hoặc xóa output họ đang dùng không?
