@@ -1,0 +1,280 @@
+{
+  "train_rows": 3833,
+  "train_start": "2012-07-04",
+  "train_end": "2022-12-31",
+  "forecast_start": "2023-01-01",
+  "forecast_end": "2024-07-01",
+  "horizon_days": 548,
+  "leakage_policy": [
+    "sample_submission is read with usecols=['Date']; Revenue/COGS values are never loaded",
+    "future exogenous rows are set to NaN before lag feature construction",
+    "forecast target lags are filled recursively from prior predictions",
+    "day-of-year exogenous climatology is computed only up to each training cutoff",
+    "yearly level calibration uses only sales.csv historical aggregates"
+  ],
+  "manifest": {
+    "files": {
+      "submission_model_raw.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_model_raw.csv",
+      "submission_cv_ensemble_raw.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_cv_ensemble_raw.csv",
+      "submission_seasonal_raw.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_seasonal_raw.csv",
+      "submission_doy_raw.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_doy_raw.csv",
+      "submission_model_recent_mean.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_model_recent_mean.csv",
+      "submission_cv_ensemble_recent_mean.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_cv_ensemble_recent_mean.csv",
+      "submission_model_yoy_continuation.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_model_yoy_continuation.csv",
+      "submission_cv_ensemble_yoy_continuation.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_cv_ensemble_yoy_continuation.csv",
+      "submission_model_log_linear_2019.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_model_log_linear_2019.csv",
+      "submission_cv_ensemble_log_linear_2019.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_cv_ensemble_log_linear_2019.csv",
+      "submission_model_blend.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_model_blend.csv",
+      "submission_cv_ensemble_blend.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_cv_ensemble_blend.csv",
+      "submission_model_recovery_upper.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_model_recovery_upper.csv",
+      "submission_cv_ensemble_recovery_upper.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_cv_ensemble_recovery_upper.csv",
+      "submission_model_regime_recovery.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_model_regime_recovery.csv",
+      "submission_cv_ensemble_regime_recovery.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_cv_ensemble_regime_recovery.csv",
+      "submission_shape_ensemble_recovery_upper.csv": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_shape_ensemble_recovery_upper.csv"
+    },
+    "train_levels": {
+      "recent_mean": {
+        "Revenue": {
+          "2023": 3014534.980039917,
+          "2024": 3014534.980039917
+        },
+        "COGS": {
+          "2023": 2637272.1013325285,
+          "2024": 2637272.1013325285
+        }
+      },
+      "yoy_continuation": {
+        "Revenue": {
+          "2023": 3594111.0123269768,
+          "2024": 4030725.4608218246
+        },
+        "COGS": {
+          "2023": 3031206.5198588697,
+          "2024": 3286585.125439899
+        }
+      },
+      "log_linear_2019": {
+        "Revenue": {
+          "2023": 3069784.5227511195,
+          "2024": 3093670.4229702954
+        },
+        "COGS": {
+          "2023": 2705105.086199979,
+          "2024": 2734500.3223809176
+        }
+      },
+      "blend": {
+        "Revenue": {
+          "2023": 3275344.194569094,
+          "2024": 3522630.2204308705
+        },
+        "COGS": {
+          "2023": 2814542.589669382,
+          "2024": 2961928.613386214
+        }
+      },
+      "recovery_upper": {
+        "Revenue": {
+          "2023": 3594111.0123269768,
+          "2024": 4030725.4608218246
+        },
+        "COGS": {
+          "2023": 3031206.5198588697,
+          "2024": 3286585.125439899
+        }
+      },
+      "regime_recovery": {
+        "Revenue": {
+          "2023": 4031796.826724414,
+          "2024": 4858802.333750198
+        },
+        "COGS": {
+          "2023": 3745048.377863612,
+          "2024": 4262890.211911261
+        }
+      }
+    },
+    "model_manifest": {
+      "Revenue": {
+        "n_features": 381,
+        "n_models": 9,
+        "models": [
+          {
+            "spec": "log_l1_leaves48",
+            "seed": 42,
+            "best_iter": 162,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l1_leaves48",
+            "seed": 123,
+            "best_iter": 257,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l1_leaves48",
+            "seed": 2024,
+            "best_iter": 206,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l2_leaves63",
+            "seed": 42,
+            "best_iter": 152,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l2_leaves63",
+            "seed": 123,
+            "best_iter": 517,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l2_leaves63",
+            "seed": 2024,
+            "best_iter": 356,
+            "transform": "log1p"
+          },
+          {
+            "spec": "raw_tweedie_leaves40",
+            "seed": 42,
+            "best_iter": 185,
+            "transform": "raw"
+          },
+          {
+            "spec": "raw_tweedie_leaves40",
+            "seed": 123,
+            "best_iter": 184,
+            "transform": "raw"
+          },
+          {
+            "spec": "raw_tweedie_leaves40",
+            "seed": 2024,
+            "best_iter": 197,
+            "transform": "raw"
+          }
+        ]
+      },
+      "COGS": {
+        "n_features": 381,
+        "n_models": 9,
+        "models": [
+          {
+            "spec": "log_l1_leaves48",
+            "seed": 42,
+            "best_iter": 538,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l1_leaves48",
+            "seed": 123,
+            "best_iter": 382,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l1_leaves48",
+            "seed": 2024,
+            "best_iter": 344,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l2_leaves63",
+            "seed": 42,
+            "best_iter": 124,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l2_leaves63",
+            "seed": 123,
+            "best_iter": 188,
+            "transform": "log1p"
+          },
+          {
+            "spec": "log_l2_leaves63",
+            "seed": 2024,
+            "best_iter": 145,
+            "transform": "log1p"
+          },
+          {
+            "spec": "raw_tweedie_leaves40",
+            "seed": 42,
+            "best_iter": 188,
+            "transform": "raw"
+          },
+          {
+            "spec": "raw_tweedie_leaves40",
+            "seed": 123,
+            "best_iter": 255,
+            "transform": "raw"
+          },
+          {
+            "spec": "raw_tweedie_leaves40",
+            "seed": 2024,
+            "best_iter": 189,
+            "transform": "raw"
+          }
+        ]
+      }
+    },
+    "recommended_first_submit": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_cv_ensemble_regime_recovery.csv",
+    "recommended_second_submit": "/home/thangquang09/code/vinuni_hackathon/sales_forecast_submission/artifacts/submission_model_regime_recovery.csv"
+  },
+  "cv_mean": [
+    {
+      "target": "COGS",
+      "model": "cv_weighted_ensemble",
+      "mae": 547400.365427725,
+      "rmse": 758883.9331590497,
+      "r2": 0.6876269582191958
+    },
+    {
+      "target": "COGS",
+      "model": "doy",
+      "mae": 594279.6345384977,
+      "rmse": 818336.6895361759,
+      "r2": 0.63636224413712
+    },
+    {
+      "target": "COGS",
+      "model": "model",
+      "mae": 574961.6082561249,
+      "rmse": 791781.9564095561,
+      "r2": 0.6600154090574389
+    },
+    {
+      "target": "COGS",
+      "model": "seasonal",
+      "mae": 728542.658439781,
+      "rmse": 1083031.3990320216,
+      "r2": 0.3623691315760625
+    },
+    {
+      "target": "Revenue",
+      "model": "cv_weighted_ensemble",
+      "mae": 631775.8392452624,
+      "rmse": 879062.006346883,
+      "r2": 0.6803943315658045
+    },
+    {
+      "target": "Revenue",
+      "model": "doy",
+      "mae": 682579.0388860765,
+      "rmse": 933400.8381554249,
+      "r2": 0.6394639881297917
+    },
+    {
+      "target": "Revenue",
+      "model": "model",
+      "mae": 663052.0220622651,
+      "rmse": 912972.7055263987,
+      "r2": 0.6550166376545383
+    },
+    {
+      "target": "Revenue",
+      "model": "seasonal",
+      "mae": 828617.6984032848,
+      "rmse": 1218865.5527831165,
+      "r2": 0.3853096249169387
+    }
+  ]
+}
