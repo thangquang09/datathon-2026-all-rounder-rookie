@@ -302,12 +302,32 @@ def build_frame(target: str) -> pd.DataFrame:
 
 EXCLUDE = {"Date"}
 
+# Ablation/compliance guard: these same-day operational aggregates are target
+# proxies on the train period (for example, items_gross_value == Revenue).
+# Drop both the raw columns and their short-lag/rolling derivatives from v1.
+TARGET_PROXY_BASES = {
+    "orders_count",
+    "items_total_qty",
+    "items_gross_value",
+    "pay_total_value",
+    "pay_mean_value",
+}
+
+
+def _is_target_proxy_feature(col: str) -> bool:
+    return any(base in col for base in TARGET_PROXY_BASES)
+
 
 def feature_cols(df: pd.DataFrame, target: str) -> list[str]:
     return [
         c
         for c in df.columns
-        if c not in EXCLUDE and c != target and df[c].dtype != "datetime64[ns]"
+        if (
+            c not in EXCLUDE
+            and c != target
+            and df[c].dtype != "datetime64[ns]"
+            and not _is_target_proxy_feature(c)
+        )
     ]
 
 

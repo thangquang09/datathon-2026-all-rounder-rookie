@@ -181,7 +181,7 @@ txt(ax, 14.85, 15.7, 'Pipeline C', fs=11, c=BOX_PIPE_C, w='bold')
 txt(ax, 14.85, 15.25, 'Legacy M5-Style Blend', fs=8, c=TEXT_MID, w='normal')
 
 c_items = [
-    (12.4, 14.0, 5.0, 0.9, 'v1: Base recursive LGBM',       '50%'),
+    (12.4, 14.0, 5.0, 0.9, 'v1: No-proxy recursive LGBM',   '50%'),
     (12.4, 12.8, 5.0, 0.9, 'v2: Improved FE + calibration',  '30%'),
     (12.4, 11.6, 5.0, 0.9, 'v3: Hyperparameter tuned',       '5%'),
     (12.4, 10.4, 5.0, 0.9, 'v4: Big FE overhaul',            '15%'),

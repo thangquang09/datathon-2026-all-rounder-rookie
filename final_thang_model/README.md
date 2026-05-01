@@ -91,8 +91,8 @@ CV và baseline single-split. Các baseline single-split có `n_folds = 1` nên 
 Submission đã test Kaggle:
 
 ```text
-publicScore: 730,879.20779
-description: train-save-infer-blend deterministic calendar pipeline
+publicScore: 730,067.90380
+description: ablation drop v1 target proxy features
 ```
 
 Submit lại bằng:
@@ -101,12 +101,15 @@ Submit lại bằng:
 uv run kaggle competitions submit \
   -c datathon-2026-round-1 \
   -f final_thang_model/submission.csv \
-  -m "train-save-infer-blend deterministic calendar pipeline"
+  -m "ablation drop v1 target proxy features"
 ```
 
 ## Leakage policy
 
 - Không dùng `Revenue/COGS` từ `sample_submission.csv`.
 - Không scale/blend theo sample target.
+- Legacy `v1` vẫn nằm trong M5 blend nhưng đã loại các target-proxy same-day
+  (`items_gross_value`, `pay_total_value`, `pay_mean_value`, `orders_count`,
+  `items_total_qty` và các lag/rolling dẫn xuất từ chúng).
 - Future features chỉ dùng calendar/holiday deterministic sinh từ `Date`, lag/seasonal prior hợp lệ hoặc prediction đã sinh trong recursive inference.
 - Validation và direct-horizon rows kiểm tra cutoff để tránh dùng actual future lag.

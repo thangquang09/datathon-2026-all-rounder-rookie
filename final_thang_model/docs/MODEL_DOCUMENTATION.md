@@ -41,7 +41,7 @@ The final submission is an **80/20 weighted blend** of two independent forecast 
 ```
 Final Submission (submission.csv)
 ├── 80% — M5-Style Multi-Version Blend
-│   ├── 50% Legacy v1 (regime_recovery calibrated)
+│   ├── 50% Legacy v1-no-proxy (regime_recovery calibrated)
 │   ├── 30% Legacy v2 (regime_recovery calibrated)
 │   ├──  5% Legacy v3 (regime_recovery calibrated)
 │   └── 15% Legacy v4 (regime_recovery calibrated)
@@ -277,7 +277,15 @@ Some daily aggregates are **semantically equivalent to the target**:
 | `items_discount_total` | Scales linearly with Revenue |
 | `orders_count` | Near-perfect correlation (|r| > 0.94) with Revenue |
 
-**Handling**: These columns are replaced entirely by their **day-of-year mean from the training period** using `replace_with_doy_mean()`. This preserves the seasonal distribution shape but removes the exact daily value that would constitute leakage.
+**Handling**:
+
+- Legacy `v1` drops the same-day target-proxy columns and their short-lag/rolling
+  derivatives from `feature_cols()`.
+- v2/v3 drop the direct proxy columns and replace volatile operational signals
+  with train-period day-of-year means.
+- v4 replaces the full exogenous frame with train-period day-of-year means using
+  `replace_with_doy_mean()`, preserving seasonal shape without exact daily
+  values.
 
 ### 3.6 Level Calibration Features
 
@@ -308,7 +316,8 @@ The following explicit safeguards are implemented:
 4. **Target lags for the forecast horizon** are filled recursively from prior predictions (not from actual values)
 5. **Direct model features** respect cutoff boundaries — `_series_get()` returns NaN for dates after the cutoff
 6. **Yearly level calibration** uses only `sales.csv` historical aggregates (regime_recovery levels)
-7. **No external data sources** — all features come from the provided CSV dates or deterministic calendar transforms of those dates
+7. **Legacy v1 target-proxy guard** drops same-day operational proxies such as `items_gross_value`, `pay_total_value`, `pay_mean_value`, `orders_count`, `items_total_qty`, and their derived short-lag/rolling features
+8. **No external data sources** — all features come from the provided CSV dates or deterministic calendar transforms of those dates
 
 This is documented in the artifact `run_audit.json` under `leakage_policy`.
 
@@ -383,7 +392,7 @@ Each legacy version is a **single-target recursive LightGBM** with progressively
 
 | Version | Key Innovation | Features |
 |---|---|---|
-| v1 | Base recursive LGBM | Calendar + basic exogenous (~50 features) |
+| v1 | Base recursive LGBM with target-proxy guard | Calendar + basic exogenous, excluding same-day proxy columns (~89 features) |
 | v2 | Improved FE + log-linear calibration | More lags, better imputation (~80 features) |
 | v3 | Hyperparameter tuning | Tweaked learning rate, leaves, regularization |
 | v4 | Big FE overhaul | Full v4 exogenous module (~100+ features from all 13 CSVs) |
@@ -401,7 +410,7 @@ submission = 0.80 × M5_blend + 0.20 × Direct_LGBM_regime_recovery
 ```
 
 Where:
-- **M5_blend** = 0.50 × v1 + 0.30 × v2 + 0.05 × v3 + 0.15 × v4 (all regime_recovery calibrated)
+- **M5_blend** = 0.50 × v1-no-proxy + 0.30 × v2 + 0.05 × v3 + 0.15 × v4 (all regime_recovery calibrated)
 - **Direct_LGBM_regime_recovery** = Direct LightGBM component from Pipeline B
 
 **Why this blend**:
@@ -593,7 +602,7 @@ final_thang_model/
 │
 ├── src/                                    ← Core modules
 │   ├── __init__.py
-│   ├── final_model.py                      ← Legacy v1: base recursive LGBM
+│   ├── final_model.py                      ← Legacy v1: base recursive LGBM with target-proxy guard
 │   ├── final_model_v2.py                   ← Legacy v2: improved FE
 │   ├── final_model_v3.py                   ← Legacy v3: hyperparameter tuning
 │   ├── final_model_v4.py                   ← Legacy v4: big FE overhaul (~100 features)

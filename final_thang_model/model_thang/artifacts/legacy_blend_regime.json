@@ -24,6 +24,7 @@
   "recommended_first_submit": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/legacy_blend_50_30_05_15.csv",
   "leakage_policy": [
     "all component models are trained from train CSVs only",
+    "legacy v1 is rebuilt with target-proxy same-day features dropped",
     "no sample_submission read in this script",
     "yearly normalisation uses regime_recovery levels derived from sales.csv"
   ]

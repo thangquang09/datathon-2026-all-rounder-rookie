@@ -154,7 +154,7 @@ def main() -> None:
     for key, builder in raw_builders.items():
         raw_path = OUT / f"legacy_{key}_raw.csv"
         norm_path = OUT / f"legacy_{key}_regime_recovery.csv"
-        if raw_path.exists():
+        if raw_path.exists() and key != "v1":
             df = pd.read_csv(raw_path, parse_dates=["Date"])
         else:
             print(f"Building {key} raw forecast ...")
@@ -184,6 +184,7 @@ def main() -> None:
         "recommended_first_submit": files["legacy_blend_50_30_05_15.csv"],
         "leakage_policy": [
             "all component models are trained from train CSVs only",
+            "legacy v1 is rebuilt with target-proxy same-day features dropped",
             "no sample_submission read in this script",
             "yearly normalisation uses regime_recovery levels derived from sales.csv",
         ],

@@ -23,6 +23,8 @@ files are never loaded as features.
   Gregorian date, not from a year-specific external holiday table.
 - Future operational aggregates are not used. Rows after the training cutoff are
   blanked or replaced by train-cutoff climatology.
+- Legacy `v1` excludes same-day target-proxy operational columns and their
+  short-lag/rolling derivatives from the training feature list.
 - Target lags in forecast periods use only values known at the cutoff or prior
   recursive predictions.
 - Day-of-year, month, weekday, and month-weekday priors are computed only from
