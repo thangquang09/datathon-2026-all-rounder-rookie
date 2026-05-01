@@ -3,6 +3,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, Rectangle
 import numpy as np
+from pathlib import Path
 
 fig, ax = plt.subplots(1, 1, figsize=(18, 24))
 ax.set_xlim(0, 18)
@@ -279,7 +280,8 @@ txt(ax, 9, 0.3, 'Key: All 16 models share identical feature groups (Tier 1). '
     fs=7.5, c=TEXT_MID, w='normal', ha='center')
 
 plt.tight_layout(pad=0.3)
-plt.savefig('/home/thangquang09/code/vinuni_hackathon/final_thang_model/PIPELINE_FLOWCHART.png', 
-            dpi=200, bbox_inches='tight', facecolor='white')
+out_path = Path(__file__).resolve().parents[1] / "docs" / "assets" / "PIPELINE_FLOWCHART.png"
+out_path.parent.mkdir(parents=True, exist_ok=True)
+plt.savefig(out_path, dpi=200, bbox_inches='tight', facecolor='white')
 plt.close()
 print("Done!")

@@ -2,8 +2,8 @@
 recursive 548-day forecast, exogenous blanked after cutoff.
 
 Outputs:
-  baseline_results.csv
-  pipeline_results.csv
+  docs/tables/baseline_results.csv
+  docs/tables/pipeline_results.csv
 """
 from __future__ import annotations
 
@@ -20,10 +20,10 @@ from xgboost import XGBRegressor
 
 warnings.filterwarnings("ignore")
 
-PACKAGE_ROOT = Path(__file__).resolve().parent
+PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 ROOT = PACKAGE_ROOT
 DATA = ROOT.parent / "data"
-OUT = ROOT
+OUT = ROOT / "docs" / "tables"
 
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -188,6 +188,7 @@ def collect_pipeline_results() -> pd.DataFrame:
 
 
 if __name__ == "__main__":
+    OUT.mkdir(parents=True, exist_ok=True)
     print("Running baselines (recursive 548-day, exogenous blanked after cutoff)...\n")
     baseline = run_baselines()
     baseline.to_csv(OUT / "baseline_results.csv", index=False)

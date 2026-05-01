@@ -1,7 +1,7 @@
 # Báo cáo Model Dự báo Revenue/COGS — DATATHON 2026
 
 **Ngày chạy pipeline:** 2026-04-30
-**Notebook:** `reproduce_best_kaggle_solution.ipynb`
+**Notebook:** `notebooks/reproduce_best_kaggle_solution.ipynb`
 **Submission:** `submission.csv`
 **Kaggle public score đã submit:** **733,976.28778**
 
@@ -379,13 +379,28 @@ Các chart đã sinh:
 
 ```
 final_thang_model/
-├── reproduce_best_kaggle_solution.ipynb    ← Notebook chính (chạy từng cell)
+├── train_save_infer_blend.py               ← Script chính train/save/infer/blend
 ├── submission.csv                          ← Final submission (80/20 blend)
-├── MODEL_REPORT.md                         ← Báo cáo này
 ├── README.md
+├── notebooks/
+│   └── reproduce_best_kaggle_solution.ipynb
+├── scripts/
+│   ├── reproduce_submission.py
+│   ├── run_baselines.py
+│   └── generate_flowchart.py
 ├── docs/
+│   ├── MODEL_REPORT.md                     ← Báo cáo này
+│   ├── MODEL_DOCUMENTATION.md
+│   ├── MODEL_EXPLAINABILITY.md
+│   ├── CV_DATA_SPLIT.md
 │   ├── vietnam_calendar_events_deterministic_2012_2024.csv
-│   └── VIETNAM_HOLIDAY_FEATURE_AUDIT.md
+│   ├── VIETNAM_HOLIDAY_FEATURE_AUDIT.md
+│   ├── assets/
+│   │   └── PIPELINE_FLOWCHART.png
+│   └── tables/
+│       ├── baseline_results.csv
+│       ├── pipeline_results.csv
+│       └── full_feature_importance.csv
 ├── model_thang/
 │   ├── forecast_pipeline.py
 │   ├── build_v4_regime_candidate.py

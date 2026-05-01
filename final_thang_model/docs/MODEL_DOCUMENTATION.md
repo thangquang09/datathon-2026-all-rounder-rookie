@@ -521,7 +521,7 @@ The model's top drivers of Revenue are typically:
 
 ## 9. Results Comparison
 
-See `baseline_results.csv` and `pipeline_results.csv` in the root of `final_thang_model/`.
+See `docs/tables/baseline_results.csv` and `docs/tables/pipeline_results.csv`.
 
 ### Baseline Models (3-fold walk-forward CV average)
 
@@ -566,11 +566,30 @@ See `baseline_results.csv` and `pipeline_results.csv` in the root of `final_than
 ```
 final_thang_model/
 ├── submission.csv                          ← Final Kaggle submission (548 rows)
-├── baseline_results.csv                    ← Baseline model comparison
-├── pipeline_results.csv                    ← Pipeline component CV results
-├── run_baselines.py                        ← Script to generate both CSVs
-├── reproduce_best_kaggle_solution.ipynb    ← Reproducible notebook
-├── MODEL_DOCUMENTATION.md                  ← This file
+├── train_save_infer_blend.py               ← End-to-end train/save/infer/blend entrypoint
+├── README.md
+│
+├── scripts/
+│   ├── run_baselines.py                    ← Script to generate baseline/model tables
+│   ├── reproduce_submission.py             ← Validate/copy final candidate only
+│   └── generate_flowchart.py               ← Regenerate docs/assets/PIPELINE_FLOWCHART.png
+│
+├── notebooks/
+│   └── reproduce_best_kaggle_solution.ipynb
+│
+├── docs/
+│   ├── MODEL_DOCUMENTATION.md              ← This file
+│   ├── MODEL_REPORT.md
+│   ├── MODEL_EXPLAINABILITY.md
+│   ├── CV_DATA_SPLIT.md
+│   ├── VIETNAM_HOLIDAY_FEATURE_AUDIT.md
+│   ├── vietnam_calendar_events_deterministic_2012_2024.csv
+│   ├── assets/
+│   │   └── PIPELINE_FLOWCHART.png
+│   └── tables/
+│       ├── baseline_results.csv
+│       ├── pipeline_results.csv
+│       └── full_feature_importance.csv
 │
 ├── src/                                    ← Core modules
 │   ├── __init__.py
@@ -601,13 +620,7 @@ final_thang_model/
 │       ├── *.csv                           ← Various submission candidates
 │       └── feature_importance/             ← SHAP/gain plots
 │
-├── docs/                                   ← Generated deterministic calendar CSV
-│   └── vietnam_calendar_events_deterministic_2012_2024.csv
-│
-└── outputs/                                ← Legacy model outputs
-    ├── final/
-    ├── final_v4/
-    └── final_v5/
+└── model_thang/artifacts/saved_models/     ← Saved direct LightGBM/Ridge models
 ```
 
 ---
@@ -619,19 +632,16 @@ final_thang_model/
 cd final_thang_model
 
 # Option 1: Run via notebook
-jupyter notebook reproduce_best_kaggle_solution.ipynb
+jupyter notebook notebooks/reproduce_best_kaggle_solution.ipynb
 
-# Option 2: Run pipeline scripts directly
-PYTHONPATH=. python model_thang/forecast_pipeline.py
-PYTHONPATH=. python model_thang/explainable_forecast_factory.py
-PYTHONPATH=. python model_thang/build_m5_style_blend.py
-PYTHONPATH=. python model_thang/build_direct_lgb_candidates.py
+# Option 2: Run the full train/save/infer/blend pipeline
+uv run python train_save_infer_blend.py --skip-visuals
 
 # The final submission.csv is produced by copying
 # model_thang/artifacts/advanced_experiments/submission_m5_lgb_direct_blend_80_20.csv
 
 # Run baseline comparison
-PYTHONPATH=. python run_baselines.py
+PYTHONPATH=. python scripts/run_baselines.py
 ```
 
 **Dependencies**: pandas, numpy, lightgbm, scikit-learn, shap, xgboost, matplotlib

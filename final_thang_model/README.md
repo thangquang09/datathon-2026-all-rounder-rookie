@@ -10,19 +10,24 @@ vinuni_hackathon/
 
 ## File chính
 
-- `reproduce_best_kaggle_solution.ipynb`: notebook reproduce theo flow data science, từ audit dữ liệu, EDA ngắn, chạy pipeline local, validate và export submission.
 - `train_save_infer_blend.py`: script end-to-end train model, lưu model, load model để inference, blend và export `submission.csv`.
-- `reproduce_submission.py`: script kiểm tra/copy final candidate hiện có ra `submission.csv` khi không cần train lại.
 - `submission.csv`: file submit cuối, sinh từ candidate local `submission_m5_lgb_direct_blend_80_20.csv`.
-- `MODEL_REPORT.md`: báo cáo kỹ thuật tiếng Việt về feature engineering, model, validation, leakage guard và explainability.
-- `CV_DATA_SPLIT.md`: mô tả cách chia train/validation, walk-forward CV, direct pseudo-cutoff CV và artifact mean/std.
+- `notebooks/reproduce_best_kaggle_solution.ipynb`: notebook reproduce theo flow data science, từ audit dữ liệu, EDA ngắn, chạy pipeline local, validate và export submission.
+- `scripts/reproduce_submission.py`: script kiểm tra/copy final candidate hiện có ra `submission.csv` khi không cần train lại.
+- `scripts/run_baselines.py`: script sinh lại bảng baseline/model comparison trong `docs/tables/`.
+- `docs/MODEL_REPORT.md`: báo cáo kỹ thuật tiếng Việt về feature engineering, model, validation, leakage guard và explainability.
+- `docs/CV_DATA_SPLIT.md`: mô tả cách chia train/validation, walk-forward CV, direct pseudo-cutoff CV và artifact mean/std.
 - `model_thang/`: các script pipeline đã được copy vào package để không phụ thuộc folder ngoài.
 - `src/`: module feature/model local dùng bởi pipeline.
-- `docs/`: CSV calendar deterministic sinh từ dương lịch và audit feature holiday dùng bởi model explainable.
+- `docs/`: report, deterministic calendar CSV, audit holiday feature, figure assets và result tables.
 
 ## Chạy lại
 
 Mở notebook và chạy top-to-bottom từ repo root hoặc từ chính folder `final_thang_model`.
+
+```text
+notebooks/reproduce_best_kaggle_solution.ipynb
+```
 
 Notebook sẽ chạy các script local:
 
@@ -41,6 +46,13 @@ Hoặc chạy toàn bộ bằng Python script:
 ```bash
 cd final_thang_model
 uv run python train_save_infer_blend.py
+```
+
+Nếu chỉ muốn kiểm tra/copy final candidate đã sinh:
+
+```bash
+cd final_thang_model
+uv run python scripts/reproduce_submission.py --overwrite
 ```
 
 Direct model được lưu tại:

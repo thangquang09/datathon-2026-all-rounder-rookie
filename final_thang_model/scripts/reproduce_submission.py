@@ -18,7 +18,7 @@ import numpy as np
 import pandas as pd
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 FINAL_CANDIDATE = (
     ROOT
     / "model_thang"
@@ -51,7 +51,7 @@ def reproduce(overwrite: bool) -> None:
     if not FINAL_CANDIDATE.exists():
         raise FileNotFoundError(
             f"Missing final candidate: {FINAL_CANDIDATE}. "
-            "Run reproduce_best_kaggle_solution.ipynb or the training scripts first."
+            "Run notebooks/reproduce_best_kaggle_solution.ipynb or train_save_infer_blend.py first."
         )
 
     validate_submission(FINAL_CANDIDATE)

@@ -95,10 +95,10 @@ Artifacts:
 
 ## Baseline Comparison
 
-`run_baselines.py` writes:
+`scripts/run_baselines.py` writes:
 
-- `baseline_results.csv`: single-split baseline model comparison.
-- `pipeline_results.csv`: fold-level pipeline component comparison.
+- `docs/tables/baseline_results.csv`: single-split baseline model comparison.
+- `docs/tables/pipeline_results.csv`: fold-level pipeline component comparison.
 
 Because `baseline_results.csv` is single-split, its combined summary has
 `n_folds = 1` and blank `*_std` columns.
