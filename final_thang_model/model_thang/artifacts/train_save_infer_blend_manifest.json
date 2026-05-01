@@ -1,0 +1,17 @@
+{
+  "calendar": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/docs/vietnam_calendar_events_deterministic_2012_2024.csv",
+  "models_dir": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/saved_models",
+  "inference_dir": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/inference",
+  "final_candidate": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/advanced_experiments/submission_m5_lgb_direct_blend_80_20.csv",
+  "submission": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/submission.csv",
+  "pipeline": [
+    "model_thang/forecast_pipeline.py",
+    "model_thang/build_v4_regime_candidate.py",
+    "model_thang/build_legacy_blend_regime.py",
+    "model_thang/build_m5_style_blend.py",
+    "model_thang/explainable_forecast_factory.py",
+    "model_thang/infer_saved_direct_models.py",
+    "model_thang/build_direct_lgb_candidates.py",
+    "model_thang/visualize_top_features.py"
+  ]
+}

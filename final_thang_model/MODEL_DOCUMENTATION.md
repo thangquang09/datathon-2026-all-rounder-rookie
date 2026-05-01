@@ -78,7 +78,7 @@ Final Submission (submission.csv)
 | `inventory.csv` | 2012-2022 (monthly) | Stockout, overstock, fill rate, sell-through |
 | `customers.csv` | 2012-2022 | Signup dates, acquisition channel, demographics |
 | `geography.csv` | — | Region/district mapping for order zip codes |
-| `vietnam_holiday_calendar_2012_2024.csv` | 2012-2024 | Machine-readable holiday dates (train-only docs) |
+| `vietnam_calendar_events_deterministic_2012_2024.csv` | 2012-2024 | Machine-readable calendar events generated from Gregorian rules |
 
 **Crucially**: `sales_test.csv` is never read. `sample_submission.csv` is read with `usecols=['Date']` only.
 
@@ -106,9 +106,12 @@ Built from the `Date` index — these are **fully deterministic** and available 
 
 ### 3.2 Vietnamese Holiday & E-commerce Event Features
 
-Built from `src/calendar_vn.py` — a hand-coded Vietnamese holiday calendar.
+Built from `src/calendar_vn.py` using deterministic rules from the Gregorian
+`Date` field. Fixed-date events use month/day checks, Black Friday uses the
+last-Friday-of-November rule, and lunar events use Vietnamese solar-to-lunar
+conversion with UTC+7.
 
-**Lunar festivals** (dates computed from Vietnamese government calendar):
+**Lunar festivals** (dates computed from Gregorian dates via solar-to-lunar conversion):
 - **Tet Nguyen Dan** (Lunar New Year): `days_to_tet`, `days_since_tet`, `is_tet_window`, `is_tet_eve_7d`, `is_tet_after_14d`
 - **Hung Kings Commemoration Day** (Lunar Mar 10): `days_to_hung_kings`, `is_hung_kings_window`
 - **Mid-Autumn Festival** (Lunar Aug 15): `days_to_mid_autumn`, `is_mid_autumn_eve_7d`
@@ -305,7 +308,7 @@ The following explicit safeguards are implemented:
 4. **Target lags for the forecast horizon** are filled recursively from prior predictions (not from actual values)
 5. **Direct model features** respect cutoff boundaries — `_series_get()` returns NaN for dates after the cutoff
 6. **Yearly level calibration** uses only `sales.csv` historical aggregates (regime_recovery levels)
-6. **No external data sources** — all features come from the 15 provided CSVs and the included Vietnamese holiday calendar
+7. **No external data sources** — all features come from the provided CSV dates or deterministic calendar transforms of those dates
 
 This is documented in the artifact `run_audit.json` under `leakage_policy`.
 
@@ -576,7 +579,7 @@ final_thang_model/
 │   ├── final_model_v3.py                   ← Legacy v3: hyperparameter tuning
 │   ├── final_model_v4.py                   ← Legacy v4: big FE overhaul (~100 features)
 │   ├── features_v4.py                      ← V4 feature engineering module
-│   └── calendar_vn.py                      ← Vietnamese holiday calendar
+│   └── calendar_vn.py                      ← Deterministic Vietnamese calendar features
 │
 ├── model_thang/                            ← Pipeline A & B implementation
 │   ├── __init__.py
@@ -598,8 +601,8 @@ final_thang_model/
 │       ├── *.csv                           ← Various submission candidates
 │       └── feature_importance/             ← SHAP/gain plots
 │
-├── docs/                                   ← Holiday calendar CSV
-│   └── vietnam_holiday_calendar_2012_2024.csv
+├── docs/                                   ← Generated deterministic calendar CSV
+│   └── vietnam_calendar_events_deterministic_2012_2024.csv
 │
 └── outputs/                                ← Legacy model outputs
     ├── final/

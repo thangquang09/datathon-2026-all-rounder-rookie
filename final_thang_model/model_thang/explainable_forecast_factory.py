@@ -7,7 +7,7 @@ leaderboard performance:
   from a historical cutoff"
 - LightGBM component for nonlinear calendar/lag effects
 - Ridge component for smooth trend/seasonality
-- train-only holiday/calendar features from the provided docs table
+- deterministic holiday/calendar features derived from Gregorian dates
 - train-only regime level calibration
 - feature importance, SHAP summary, feature-group audit, and a markdown report
 
@@ -19,6 +19,7 @@ from __future__ import annotations
 
 import json
 import math
+import pickle
 import sys
 import warnings
 from dataclasses import dataclass
@@ -53,7 +54,8 @@ from model_thang.forecast_pipeline import (  # noqa: E402
 DATA = ROOT.parent / "data"
 DOCS = ROOT / "docs"
 OUT = ROOT / "model_thang" / "artifacts"
-HOLIDAY_CSV = DOCS / "vietnam_holiday_calendar_2012_2024.csv"
+MODEL_OUT = OUT / "saved_models" / "direct_factory"
+HOLIDAY_CSV = DOCS / "vietnam_calendar_events_deterministic_2012_2024.csv"
 
 SEED = 20260429
 DIRECT_CUTOFFS = pd.to_datetime(
@@ -90,6 +92,32 @@ class FittedDirect:
     cv_metrics: pd.DataFrame
     importance: pd.DataFrame
     shap_importance: pd.DataFrame
+
+
+def save_fitted_direct(fitted: FittedDirect, model_dir: Path) -> dict[str, str]:
+    """Persist trained direct models and feature metadata for inference."""
+    target_dir = model_dir / fitted.target
+    target_dir.mkdir(parents=True, exist_ok=True)
+
+    lgb_path = target_dir / "lightgbm.txt"
+    ridge_path = target_dir / "ridge_pipeline.pkl"
+    metadata_path = target_dir / "metadata.json"
+
+    fitted.lgb_model.save_model(str(lgb_path))
+    with ridge_path.open("wb") as f:
+        pickle.dump(fitted.ridge_model, f)
+    metadata = {
+        "target": fitted.target,
+        "feature_cols": fitted.feature_cols,
+        "weights": fitted.weights,
+    }
+    metadata_path.write_text(json.dumps(metadata, indent=2))
+
+    return {
+        f"{fitted.target}_lgb_model": str(lgb_path),
+        f"{fitted.target}_ridge_model": str(ridge_path),
+        f"{fitted.target}_metadata": str(metadata_path),
+    }
 
 
 def _safe_name(name: str) -> str:
@@ -154,8 +182,9 @@ def deterministic_calendar(index: pd.DatetimeIndex) -> pd.DataFrame:
         feats["vn_calendar_error"] = 1
         feats["vn_calendar_error_code"] = float(abs(hash(str(exc))) % 1000)
 
-    # Explicit features from the audited CSV, so the technical report can point
-    # to a machine-readable holiday table rather than only hard-coded constants.
+    # Explicit features from a generated deterministic calendar table. The table
+    # is reproducible from Gregorian Date rules and does not encode external
+    # year-specific holiday lookup data.
     for name, dates in load_holiday_events().items():
         days_to, days_since = _nearest_event_distance(index, dates)
         feats[f"hol_days_to_{name}"] = days_to
@@ -607,6 +636,7 @@ def write_report(
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
+    MODEL_OUT.mkdir(parents=True, exist_ok=True)
     sales = load_sales()
 
     fitted: dict[str, FittedDirect] = {}
@@ -615,10 +645,12 @@ def main() -> None:
     all_imp = []
     all_shap = []
     weights = {}
+    model_files: dict[str, str] = {}
 
     for target in TARGETS:
         fit = cv_and_fit(sales, target)
         fitted[target] = fit
+        model_files.update(save_fitted_direct(fit, MODEL_OUT))
         weights[target] = fit.weights
         all_cv.append(fit.cv_metrics)
         all_imp.append(fit.importance)
@@ -686,6 +718,7 @@ def main() -> None:
         "weights": weights,
         "levels": levels,
         "files": files,
+        "model_files": model_files,
         "holiday_source": str(HOLIDAY_CSV),
         "recommended_low_risk_submit": files.get("m5_direct_85_15", files["direct_regime"]),
         "recommended_next_probe": files.get("m5_direct_80_20", files["direct_regime"]),
@@ -693,7 +726,7 @@ def main() -> None:
         "leakage_policy": [
             "no sample_submission target values read",
             "future operational aggregates are not used",
-            "holiday features come from provided docs/vietnam_holiday_calendar_2012_2024.csv",
+            "holiday features are deterministic transforms of Gregorian Date, including solar-to-lunar conversion",
             "direct rows use only information known at each historical cutoff",
         ],
     }

@@ -3,12 +3,12 @@
   "regime_recovery_file": "/home/thangquang09/code/vinuni_hackathon/final_thang_model/model_thang/artifacts/submission_v4_regime_recovery.csv",
   "raw_means": {
     "Revenue": {
-      "2023": 2975862.5577189,
-      "2024": 3460524.629012956
+      "2023": 2974760.2553810407,
+      "2024": 3460430.077953231
     },
     "COGS": {
-      "2023": 2593508.295796244,
-      "2024": 2913846.9571861844
+      "2023": 2593466.6399253486,
+      "2024": 2914348.7796806805
     }
   },
   "levels": {

@@ -20,26 +20,26 @@ Forecast daily `Revenue` and `COGS` for 2023-01-01 to 2024-07-01 with a reproduc
 
 | target   | fold_cutoff   | model           |              mae |             rmse |      r2 |
 |:---------|:--------------|:----------------|-----------------:|-----------------:|--------:|
-| Revenue  | 2020-06-30    | lgb             | 528581           | 800948           |  0.7345 |
-| Revenue  | 2020-06-30    | ridge           |      2.47978e+06 |      2.87676e+06 | -2.4245 |
+| Revenue  | 2020-06-30    | lgb             | 524637           | 796969           |  0.7372 |
+| Revenue  | 2020-06-30    | ridge           |      2.49304e+06 |      2.89121e+06 | -2.459  |
 | Revenue  | 2020-06-30    | doy_prior       |      1.51774e+06 |      1.83397e+06 | -0.3918 |
-| Revenue  | 2020-12-31    | lgb             | 601202           | 861855           |  0.7612 |
-| Revenue  | 2020-12-31    | ridge           |      2.84904e+06 |      3.27444e+06 | -2.4474 |
+| Revenue  | 2020-12-31    | lgb             | 625660           | 901193           |  0.7389 |
+| Revenue  | 2020-12-31    | ridge           |      2.8814e+06  |      3.31066e+06 | -2.524  |
 | Revenue  | 2020-12-31    | doy_prior       |      1.30527e+06 |      1.68428e+06 |  0.0879 |
-| Revenue  | 2021-07-01    | lgb             | 441182           | 664638           |  0.8168 |
-| Revenue  | 2021-07-01    | ridge           | 677453           | 961442           |  0.6167 |
+| Revenue  | 2021-07-01    | lgb             | 438916           | 664956           |  0.8167 |
+| Revenue  | 2021-07-01    | ridge           | 669245           | 941294           |  0.6326 |
 | Revenue  | 2021-07-01    | doy_prior       | 899250           |      1.19517e+06 |  0.4077 |
-| Revenue  | all_oof       | weighted_direct | 503012           | 733825           |  0.7994 |
-| COGS     | 2020-06-30    | lgb             | 435557           | 650611           |  0.7661 |
-| COGS     | 2020-06-30    | ridge           |      1.99445e+06 |      2.31364e+06 | -1.958  |
+| Revenue  | all_oof       | weighted_direct | 504399           | 742145           |  0.7948 |
+| COGS     | 2020-06-30    | lgb             | 428369           | 637186           |  0.7756 |
+| COGS     | 2020-06-30    | ridge           |      2.01115e+06 |      2.33148e+06 | -2.0038 |
 | COGS     | 2020-06-30    | doy_prior       |      1.29019e+06 |      1.55701e+06 | -0.3396 |
-| COGS     | 2020-12-31    | lgb             | 535902           | 761583           |  0.7568 |
-| COGS     | 2020-12-31    | ridge           |      2.26226e+06 |      2.61075e+06 | -1.8584 |
+| COGS     | 2020-12-31    | lgb             | 543098           | 771555           |  0.7503 |
+| COGS     | 2020-12-31    | ridge           |      2.3049e+06  |      2.65733e+06 | -1.9614 |
 | COGS     | 2020-12-31    | doy_prior       |      1.0272e+06  |      1.33831e+06 |  0.2489 |
-| COGS     | 2021-07-01    | lgb             | 386235           | 566307           |  0.8285 |
-| COGS     | 2021-07-01    | ridge           | 544513           | 744370           |  0.7036 |
+| COGS     | 2021-07-01    | lgb             | 385504           | 565814           |  0.8288 |
+| COGS     | 2021-07-01    | ridge           | 546033           | 742003           |  0.7055 |
 | COGS     | 2021-07-01    | doy_prior       | 756748           |      1.00994e+06 |  0.4544 |
-| COGS     | all_oof       | weighted_direct | 441595           | 633897           |  0.8038 |
+| COGS     | all_oof       | weighted_direct | 440726           | 633629           |  0.804  |
 
 ## Direct Component Weights
 
@@ -52,39 +52,39 @@ Forecast daily `Revenue` and `COGS` for 2023-01-01 to 2024-07-01 with a reproduc
 
 | target   | group                |       gain |
 |:---------|:---------------------|-----------:|
-| COGS     | calendar_seasonality | 596431     |
-| COGS     | target_lag           | 237498     |
-| COGS     | holiday_event        | 100588     |
-| COGS     | regime_level         |  13944.5   |
-| COGS     | anchor_level         |  13158.5   |
-| COGS     | horizon              |   5762.27  |
-| COGS     | other                |    396.587 |
-| Revenue  | calendar_seasonality | 578926     |
-| Revenue  | target_lag           | 266505     |
-| Revenue  | holiday_event        | 112893     |
-| Revenue  | anchor_level         |  12992.5   |
-| Revenue  | regime_level         |  11461     |
-| Revenue  | horizon              |   5562.42  |
-| Revenue  | other                |    387.471 |
+| COGS     | calendar_seasonality | 605393     |
+| COGS     | target_lag           | 238143     |
+| COGS     | holiday_event        | 104964     |
+| COGS     | anchor_level         |  11863.8   |
+| COGS     | regime_level         |  11793.4   |
+| COGS     | horizon              |   6899.14  |
+| COGS     | other                |    324.966 |
+| Revenue  | calendar_seasonality | 584945     |
+| Revenue  | target_lag           | 263412     |
+| Revenue  | holiday_event        | 117373     |
+| Revenue  | anchor_level         |  10616.5   |
+| Revenue  | regime_level         |  10354.2   |
+| Revenue  | horizon              |   6542.76  |
+| Revenue  | other                |    454.249 |
 
 ## Top Feature Groups By SHAP
 
 | target   | group                |   mean_abs_shap |
 |:---------|:---------------------|----------------:|
-| COGS     | calendar_seasonality |        0.609275 |
-| COGS     | target_lag           |        0.163764 |
-| COGS     | holiday_event        |        0.099235 |
-| COGS     | regime_level         |        0.031536 |
-| COGS     | anchor_level         |        0.013378 |
-| COGS     | horizon              |        0.001797 |
-| COGS     | other                |        0.0001   |
-| Revenue  | calendar_seasonality |        0.57763  |
-| Revenue  | target_lag           |        0.224136 |
-| Revenue  | holiday_event        |        0.100945 |
-| Revenue  | regime_level         |        0.022215 |
-| Revenue  | anchor_level         |        0.014591 |
-| Revenue  | horizon              |        0.001483 |
-| Revenue  | other                |        0.000231 |
+| COGS     | calendar_seasonality |        0.612165 |
+| COGS     | target_lag           |        0.160663 |
+| COGS     | holiday_event        |        0.111717 |
+| COGS     | regime_level         |        0.027691 |
+| COGS     | anchor_level         |        0.008111 |
+| COGS     | horizon              |        0.001663 |
+| COGS     | other                |        0.000136 |
+| Revenue  | calendar_seasonality |        0.573752 |
+| Revenue  | target_lag           |        0.221546 |
+| Revenue  | holiday_event        |        0.111961 |
+| Revenue  | regime_level         |        0.019209 |
+| Revenue  | anchor_level         |        0.009369 |
+| Revenue  | horizon              |        0.001244 |
+| Revenue  | other                |        0.000396 |
 
 ## Business Explanation
 
