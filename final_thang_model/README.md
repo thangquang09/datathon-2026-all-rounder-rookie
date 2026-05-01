@@ -57,6 +57,22 @@ model_thang/artifacts/inference/
 Các script đã được chỉnh path để đọc `../data` và ghi artifact vào
 `final_thang_model/model_thang/artifacts`.
 
+## CV metrics
+
+Các kết quả CV lưu theo từng fold/cutoff và có thêm bảng tổng hợp mean/std:
+
+```text
+model_thang/artifacts/cv_metrics.csv
+model_thang/artifacts/direct_factory_cv_metrics.csv
+model_thang/artifacts/cv_metrics_mean_std.csv
+model_thang/artifacts/direct_factory_cv_metrics_mean_std.csv
+model_thang/artifacts/model_baseline_metrics_mean_std.csv
+```
+
+`model_baseline_metrics_mean_std.csv` gộp recursive pipeline CV, direct factory
+CV và baseline single-split. Các baseline single-split có `n_folds = 1` nên cột
+`*_std` để trống.
+
 ## Submit
 
 Submission đã test Kaggle:
