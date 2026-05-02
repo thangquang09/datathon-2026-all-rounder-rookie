@@ -72,12 +72,9 @@ ipython_config.py
 artifacts/
 checkpoints/
 models/
-<<<<<<< Updated upstream
-outputs/
-=======
 !src/models/
 !src/models/**
->>>>>>> Stashed changes
+outputs/
 predictions/
 runs/
 wandb/
