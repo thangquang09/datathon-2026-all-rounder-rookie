@@ -251,6 +251,17 @@ uv run python -m src.visualization.sales_forecast_feature_importance
 uv run python -m src.visualization.sales_forecast_pipeline_flowchart
 ```
 
+### Docker (Khuyên Dùng Cho Giám Khảo)
+
+Build Docker image và chạy toàn bộ pipeline end-to-end (~18 phút trên CPU):
+
+```bash
+docker build -t datathon2026-forecast .
+docker run --rm -v $(pwd)/output:/app/data/processed/sales_forecast_submission datathon2026-forecast
+```
+
+Kết quả nằm tại `output/submission.csv`. Pipeline train 7 bước tuần tự: recursive LGBM + seasonal/DoY ensemble → v4 regime → legacy v1–v4 blend → M5-style blend → direct LightGBM/Ridge factory → inference → final blend 80/20 → `submission.csv`.
+
 ## 7. Các Output Quan Trọng
 
 | Output                             | Đường dẫn                                                                             |
@@ -284,3 +295,4 @@ Team **All-Rounder Rookie**:
 | Làm việc với EDA phân khúc        | `notebooks/eda_segmentation.ipynb`                     |
 | Làm việc với phân tích sản phẩm | `notebooks/eda_product_insights.ipynb`                 |
 | Thí nghiệm model                     | `notebooks/model_lgbm_forecasting.ipynb`               |
+| Tái tạo submission bằng Docker  | `docker run --rm datathon2026-forecast`                 |

@@ -1,0 +1,15 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+*.pyo
+.ipynb_checkpoints
+data/processed/
+data/thang.quang/
+data/truong.le/
+docs/images/
+*.egg-info
+.ruff_cache
+.mypy_cache
+.pytest_cache
